@@ -1,102 +1,148 @@
-/* -------- Dynamic Page Heading -------- */
-const params = new URLSearchParams(window.location.search);
-const serviceName = params.get("service");
-const heading = document.getElementById("pageHeading");
-if (serviceName) {
-  heading.textContent =
-    "Schedule an Appointment for " + decodeURIComponent(serviceName);
-}
-
-/* -------- Calendar Setup -------- */
+// --- Page Setup ---
+const pageTitle = document.getElementById("page-title");
+const monthYear = document.getElementById("monthYear");
 const calendar = document.getElementById("calendar");
-const today = new Date();
-const currentMonth = today.getMonth();
-const currentYear = today.getFullYear();
+const timeSlots = document.getElementById("timeSlots");
+const prevMonthBtn = document.getElementById("prevMonth");
+const nextMonthBtn = document.getElementById("nextMonth");
 
-const monthStart = new Date(currentYear, currentMonth, 1);
-const monthEnd = new Date(currentYear, currentMonth + 1, 0);
-const daysInMonth = monthEnd.getDate();
+// --- Determine Page Title from Link ---
+const params = new URLSearchParams(window.location.search);
+const service = params.get("service");
+if (service) {
+  pageTitle.textContent = `Schedule an Appointment for ${service}`;
+}
 
-const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-// Weekday header row
-let headerRow = '<div class="w3-row w3-bottombar w3-border-gray">';
-weekdays.forEach(
-  (day) =>
-    (headerRow += `<div class="w3-col calendar-day"><strong>${day}</strong></div>`)
+// --- Date Handling ---
+let today = new Date();
+let currentMonth = today.getMonth();
+let currentYear = today.getFullYear();
+const todayMidnight = new Date(
+  today.getFullYear(),
+  today.getMonth(),
+  today.getDate()
 );
-headerRow += "</div>";
-calendar.innerHTML = headerRow;
 
-// Day cells
-let dayCells = "";
-let startDay = monthStart.getDay();
-for (let i = 0; i < startDay; i++) {
-  dayCells += '<div class="w3-col calendar-day empty">&nbsp;</div>';
-}
+// Limit navigation to 2 months ahead
+const maxMonth = new Date(today.getFullYear(), today.getMonth() + 2, 1);
 
-for (let day = 1; day <= daysInMonth; day++) {
-  const date = new Date(currentYear, currentMonth, day);
-  const isToday = day === today.getDate();
-  dayCells += `
-        <div 
-          class="w3-col calendar-day ${isToday ? "today selected" : ""}" 
-          data-date="${date.toDateString()}"
-          data-day="${date.getDay()}"
-          onclick="selectDay(this)"
-        >
-          ${day}
-        </div>`;
-}
+// --- Build Calendar ---
+function buildCalendar(month, year) {
+  calendar.innerHTML = "";
 
-calendar.innerHTML += dayCells;
+  // Start week on Monday, end on Sunday
+  const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-/* -------- Day Selection and Time Slots -------- */
-const slotsContainer = document.getElementById("slotsContainer");
-const selectedDateHeading = document.getElementById("selectedDateHeading");
+  // Add weekday headers
+  weekdays.forEach((day) => {
+    const header = document.createElement("div");
+    header.textContent = day;
+    header.classList.add("calendar-header");
+    calendar.appendChild(header);
+  });
 
-function showSlots(dateString, dayOfWeek) {
-  selectedDateHeading.textContent = "Available Times for " + dateString;
-  slotsContainer.innerHTML = "";
+  const firstDay = new Date(year, month, 1);
+  let startDay = firstDay.getDay(); // Sunday=0, Monday=1, etc.
+  startDay = (startDay + 6) % 7; // Make Monday=0, Sunday=6
 
-  if (dayOfWeek === 0 || dayOfWeek === 6) {
-    slotsContainer.innerHTML =
-      "<p class='w3-text-red w3-large'>No time slots available on weekends.</p>";
-  } else {
-    for (let hour = 9; hour <= 16; hour++) {
-      const ampm = hour < 12 ? "AM" : "PM";
-      const displayHour = hour <= 12 ? hour : hour - 12;
-      const button = document.createElement("button");
-      button.textContent = `${displayHour}:00 ${ampm}`;
-      button.className = "w3-button w3-blue w3-round time-slot";
-      button.onclick = () =>
-        alert(`You selected ${displayHour}:00 ${ampm} on ${dateString}`);
-      slotsContainer.appendChild(button);
-    }
+  const numDays = new Date(year, month + 1, 0).getDate();
+
+  // Fill in empty slots before first day
+  for (let i = 0; i < startDay; i++) {
+    const empty = document.createElement("div");
+    empty.classList.add("calendar-day", "empty");
+    calendar.appendChild(empty);
   }
+
+  // Add the days
+  for (let date = 1; date <= numDays; date++) {
+    const dayDiv = document.createElement("div");
+    dayDiv.textContent = date;
+    dayDiv.classList.add("calendar-day");
+
+    const currentDate = new Date(year, month, date);
+
+    if (currentDate.toDateString() === todayMidnight.toDateString()) {
+      dayDiv.classList.add("today");
+    }
+
+    if (currentDate < todayMidnight) {
+      dayDiv.classList.add("past");
+    } else {
+      dayDiv.addEventListener("click", () => selectDate(currentDate, dayDiv));
+    }
+
+    calendar.appendChild(dayDiv);
+  }
+
+  // Update header
+  monthYear.textContent = `${new Intl.DateTimeFormat("en-US", {
+    month: "long",
+  }).format(new Date(year, month))} ${year}`;
 }
 
-function selectDay(element) {
-  // Remove previous selection
+// --- Date Selection ---
+function selectDate(date, element) {
+  // Clear previous selection
   document
-    .querySelectorAll(".calendar-day.selected")
-    .forEach((el) => el.classList.remove("selected"));
-
-  // Highlight clicked day
+    .querySelectorAll(".calendar-day")
+    .forEach((d) => d.classList.remove("selected"));
   element.classList.add("selected");
 
-  // Show time slots for selected day
-  const dateString = element.getAttribute("data-date");
-  const dayOfWeek = parseInt(element.getAttribute("data-day"));
-  showSlots(dateString, dayOfWeek);
+  const dayOfWeek = date.getDay(); // Sunday=0 ... Saturday=6
+  const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+
+  if (isWeekend) {
+    timeSlots.innerHTML = `<p class="w3-text-red">No time slots available on weekends.</p>`;
+  } else {
+    const times = [];
+    for (let hour = 9; hour <= 16; hour++) {
+      const ampm = hour < 12 ? "AM" : "PM";
+      const displayHour = hour > 12 ? hour - 12 : hour;
+      times.push(`${displayHour}:00 ${ampm}`);
+    }
+    timeSlots.innerHTML = times
+      .map(
+        (time) =>
+          `<button class="w3-button w3-border w3-round-large time-slot">${time}</button>`
+      )
+      .join("");
+  }
 }
 
-// Default: show today’s date and slots
-window.onload = () => {
-  const todayElement = document.querySelector(".calendar-day.today");
-  if (todayElement) {
-    const dateString = todayElement.getAttribute("data-date");
-    const dayOfWeek = parseInt(todayElement.getAttribute("data-day"));
-    showSlots(dateString, dayOfWeek);
+// --- Month Navigation ---
+prevMonthBtn.addEventListener("click", () => {
+  if (currentMonth > today.getMonth() || currentYear > today.getFullYear()) {
+    currentMonth--;
+    if (currentMonth < 0) {
+      currentMonth = 11;
+      currentYear--;
+    }
+    buildCalendar(currentMonth, currentYear);
   }
-};
+});
+
+nextMonthBtn.addEventListener("click", () => {
+  const next = new Date(currentYear, currentMonth + 1, 1);
+  if (next <= maxMonth) {
+    currentMonth++;
+    if (currentMonth > 11) {
+      currentMonth = 0;
+      currentYear++;
+    }
+    buildCalendar(currentMonth, currentYear);
+  }
+});
+
+// --- Initialize ---
+buildCalendar(currentMonth, currentYear);
+
+// Default select today's date
+setTimeout(() => {
+  const allDays = document.querySelectorAll(".calendar-day");
+  allDays.forEach((d) => {
+    if (d.classList.contains("today")) {
+      d.click();
+    }
+  });
+}, 200);

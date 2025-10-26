@@ -1770,28 +1770,73 @@ w3-hover-cobalt:hover {
   z-index: 1;
 }
 
-/* Center calendar cells and give them some padding */
+/* --- Calendar Grid --- */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- Calendar Headers --- */
+.calendar-header {
+  font-weight: bold;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* --- Calendar Cells --- */
 .calendar-day {
-  width: 14.28%;
   cursor: pointer;
   padding: 16px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  min-height: 60px;
 }
 
 .calendar-day:hover {
   background-color: #f1f1f1;
 }
 
-/* Highlight current day (optional) */
 .today {
   background-color: #d9edf7 !important;
 }
 
-/* Booking slot button styling */
+.selected {
+  border: 2px solid #2196f3 !important;
+  background-color: #e3f2fd !important;
+}
+
+.past {
+  color: #aaa !important;
+  background-color: #f9f9f9 !important;
+  cursor: not-allowed !important;
+}
+
+.empty {
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+/* --- Time Slots --- */
 .time-slot {
   margin: 4px;
 }
 
-/* Hide slots until a day is clicked */
-#timeSlots {
-  display: none;
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  #calendar {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .calendar-day {
+    padding: 12px;
+  }
 }
