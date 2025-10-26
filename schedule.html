@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="w3.css" />
+  </head>
+
+  <body class="w3-light-grey">
+    <script src="hamburger.js"></script>
+    <div class="w3-bar w3-light-gray w3-center">
+      <!-- Desktop Menu Items (hidden on small screens) -->
+      <div class="menu-center w3-hide-small">
+        <a
+          href="index.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Home</a
+        >
+        <a
+          href="consulting.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Consulting</a
+        >
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Tax Preparation</a
+        >
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Contact</a
+        >
+        <img src="images/logo.png" alt="Company Logo" />
+      </div>
+
+      <!-- Hamburger Icon (right side, visible only on small screens) -->
+      <button
+        class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large menu-toggle"
+        aria-controls="smallMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        onclick="toggleMenu()"
+      >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Collapsible Mobile Menu -->
+    <div
+      id="smallMenu"
+      class="w3-bar-block w3-light-gray w3-hide w3-hide-medium w3-hide-large w3-center"
+      aria-hidden="true"
+    >
+      <a
+        href="#"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Home</a
+      >
+      <a
+        href="#"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Consulting</a
+      >
+      <a
+        href="#"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Tax Preperation</a
+      >
+      <a
+        href="#"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Contact</a
+      >
+      <img src="images/logo.png" alt="Company Logo" />
+    </div>
+
+    <!-- Dynamic Heading -->
+    <header class="w3-container w3-blue w3-center w3-padding-32">
+      <h1 id="pageHeading">Schedule an Appointment</h1>
+    </header>
+
+    <!-- Main Content: Calendar on left, times on right -->
+    <div class="w3-row-padding w3-margin-top w3-margin-bottom">
+      <!-- Left: Calendar -->
+      <div class="w3-col l8 m12">
+        <div class="w3-container w3-white w3-card w3-padding-32">
+          <h3 class="w3-center">Select a Date</h3>
+          <div
+            id="calendar"
+            class="w3-row w3-center w3-border-top w3-border-bottom w3-margin-top"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Right: Time Slots -->
+      <div class="w3-col l4 m12 w3-margin-bottom">
+        <div class="w3-container w3-white w3-card w3-padding-32">
+          <h3 id="selectedDateHeading" class="w3-center">Available Times</h3>
+          <div id="slotsContainer" class="w3-center w3-margin-top"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="schedule.js"></script>
+  </body>
+</html>
