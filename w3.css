@@ -544,7 +544,7 @@ a {
   width: 8.33333%;
 }
 .w3-col.s2 {
-  width: 19.1%;
+  width: 16.33333%;
 }
 .w3-col.s3 {
   width: 24.99999%;
@@ -1705,4 +1705,67 @@ w3-hover-cobalt:hover {
 .w3-border-pale-blue,
 .w3-hover-border-pale-blue:hover {
   border-color: #e7ffff !important;
+}
+
+.service-img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  display: inline-block;
+}
+
+.service-box {
+  margin: 8px; /* adjust this number for larger/smaller gaps */
+  border-radius: 6px; /* optional: soften the box edges */
+}
+
+.service-box:hover {
+  opacity: 0.95;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-toggle {
+  font-size: 22px;
+  padding: 12px 16px;
+}
+/* ensure menu items appear centered inline */
+.menu-center {
+  display: inline-block;
+}
+
+.x-margin-small {
+  margin: 4px;
+}
+
+/* Custom background section */
+.bg-consulting {
+  background-image: url("images/Consultingpic.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px; /* adjust as needed */
+}
+
+/* Add a dark overlay effect for readability (optional) */
+.bg-consulting::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* darkens background slightly */
+  z-index: 0;
+}
+
+/* Make sure text sits above the overlay */
+.bg-consulting h2,
+.bg-consulting p {
+  position: relative;
+  z-index: 1;
 }
