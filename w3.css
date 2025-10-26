@@ -1427,8 +1427,8 @@ w3-hover-cobalt:hover {
   background-color: #87794e !important;
 }
 .w3-danger {
-  color: #fff !important;
-  background-color: #dd0000 !important;
+  color: #000 !important;
+  background-color: #e10b0b !important;
 }
 .w3-note {
   color: #000 !important;
