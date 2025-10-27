@@ -3,37 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consulting</title>
-    <link rel="stylesheet" href="w3.css" />
+    <title>Consulting Services - Dimar Consulting</title>
+    <meta
+      name="description"
+      content="Integrated consulting solutions to enhance business performance. Management support, operational reviews, security consulting, and more."
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/collapsible-hamburger-menu.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <script src="hamburger.js"></script>
-    <div class="w3-bar w3-light-gray w3-center">
+    <!-- Top Navigation Bar -->
+    <div class="w3-bar w3-light-gray w3-center" id="top">
+      <!-- Company Logo (left side) -->
+      <a href="./index.html" class="w3-bar-item w3-left logo-link">
+        <img
+          src="./images/logo.png"
+          alt="Dimar Consulting & Investment Group LLC Logo"
+          class="navbar-logo"
+        />
+      </a>
       <!-- Desktop Menu Items (hidden on small screens) -->
       <div class="menu-center w3-hide-small">
         <a
-          href="index.html"
+          href="./index.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Home</a
         >
         <a
-          href="consulting.html"
+          href="./consulting.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Consulting</a
         >
         <a
-          href="#"
+          href="./tax-preparation.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Tax Preparation</a
         >
         <a
           href="#"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Why Dimar?</a
+        >
+        <a
+          href="./contact.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Contact</a
         >
-
-        <img src="images/logo.png" alt="Company Logo" />
       </div>
+
+      <!-- Dark Mode Toggle Icon -->
+      <button
+        id="darkModeToggle"
+        class="w3-bar-item w3-button w3-right"
+        title="Toggle dark mode"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fa fa-moon" aria-hidden="true"></i>
+      </button>
 
       <!-- Hamburger Icon (right side, visible only on small screens) -->
       <button
@@ -54,146 +85,272 @@
       aria-hidden="true"
     >
       <a
-        href="index.html"
+        href="./index.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Home</a
       >
       <a
-        href="consulting.html"
+        href="./consulting.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Consulting</a
       >
       <a
-        href="#"
+        href="./tax-preparation.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
-        >Tax Preperation</a
+        >Tax Preparation</a
       >
       <a
         href="#"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Why Dimar?</a
+      >
+      <a
+        href="./contact.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Contact</a
       >
-      <img src="images/logo.png" alt="Company Logo" />
     </div>
 
-    <div
-      class="w3-container w3-center w3-padding-64 w3-text-white bg-consulting"
-    >
-      <h2 class="w3-xxlarge">Consulting</h2>
-      <p class="w3-large">
-        Helping businesses streamline their operations and grow efficiently.
-      </p>
-    </div>
-
-    <div
-      class="w3-container w3-margin-top w3-padding-16 w3-margin-right w3-margin-left"
-    >
-      <p>
-        Our consulting focus on integrated solutions designed to enhance the
-        performance of your business. By incorporating into your business
-        processes and management strategies, we can help keep you ahead of the
-        competition. We also connect clients to opportunities for new business.
-        We can assist with:
-      </p>
-      <ul>
-        <li>Management & Facilitation Support</li>
-        <li>Operational Reviews</li>
-        <li>Security Consultant</li>
-        <li>Administrative Services</li>
-        <li>Independent Financial Audits</li>
-      </ul>
-
-      <p>
-        Please feel free to inquire about a service if you do not see it listed.
-        If it is not a service we provide, we would be more than happy to refer
-        you to a qualified professional.
-      </p>
-    </div>
-
-    <!-- Schedule Section -->
-    <div
-      class="w3-container w3-margin-top w3-padding-16 w3-light-gray w3-margin-right w3-margin-left"
-    >
-      <h2 class="w3-center">Schedule An Appointment</h2>
-      <p class="w3-center">
-        The meetings are an introductory meeting and will take about 1 hour.
-      </p>
-
-      <div class="w3-row-padding w3-padding-16 service-row">
-        <!-- Tax Preparation -->
-        <div class="w3-col l2 m4 s12 w3-center w3-padding w3-cyan service-box">
-          <h4>Tax Preparation</h4>
-          <img src="images/taxp.jpg" alt="Tax Icon" class="service-img" />
-          <a
-            href="schedule.html?service=Tax Preparation"
-            class="w3-button w3-blue w3-margin-top"
-            >Schedule Now</a
-          >
-        </div>
-
-        <!-- Notary Public -->
-        <div
-          class="w3-col l2 m4 s12 w3-center w3-padding w3-orange service-box"
-        >
-          <h4>Notary Public</h4>
-          <img src="images/notary.jpg" alt="Notary Icon" class="service-img" />
-          <a
-            href="schedule.html?service=Notary Public"
-            class="w3-button w3-blue w3-margin-top"
-            >Schedule Now</a
-          >
-        </div>
-
-        <!-- Admin Consulting Services -->
-        <div
-          class="w3-col l2 m4 s12 w3-center w3-padding w3-light-green service-box"
-        >
-          <h4>Admin Consulting Services</h4>
-          <img src="images/acs.jpg" alt="Consulting Icon" class="service-img" />
-          <a
-            href="schedule.html?service=Admin Consulting Services"
-            class="w3-button w3-blue w3-margin-top"
-            >Schedule Now</a
-          >
-        </div>
-
-        <!-- Security Consultation -->
-        <div
-          class="w3-col l2 m4 s12 w3-center w3-padding w3-yellow service-box"
-        >
-          <h4>Security Consultation</h4>
-          <img
-            src="images/security.jpg"
-            alt="Security Icon"
-            class="service-img"
-          />
-          <a
-            href="schedule.html?service=Security Consultation"
-            class="w3-button w3-blue w3-margin-top"
-            >Schedule Now</a
-          >
-        </div>
-
-        <!-- Real Estate -->
-        <div
-          class="w3-col l2 m4 s12 w3-center w3-padding w3-danger service-box"
-        >
-          <h4>Real Estate</h4>
-          <img
-            src="images/realestate.jpg"
-            alt="Real Estate Icon"
-            class="service-img"
-          />
-          <a
-            href="schedule.html?service=Real Estate"
-            class="w3-button w3-blue w3-margin-top"
-            >Schedule Now</a
-          >
-        </div>
-        <!-- End Real Estate -->
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Consulting Services</h1>
+        <p class="hero-subtitle">
+          Integrated solutions designed to enhance the performance of your
+          business and keep you ahead of the competition.
+        </p>
+        <a href="./contact.html" class="btn-primary">Get Started Today</a>
       </div>
-      <!-- End Service Row -->
-    </div>
-    <!-- End Schedule Section -->
+    </header>
+
+    <main>
+      <!-- Services Overview Section -->
+      <section class="section-light">
+        <div class="container">
+          <h2 class="section-title">How We Help Your Business Succeed</h2>
+          <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-xl);">
+            Our consulting focuses on integrated solutions designed to enhance
+            the performance of your business. By incorporating best practices
+            into your business processes and management strategies, we can help
+            keep you ahead of the competition. We also connect clients to
+            opportunities for new business.
+          </p>
+
+          <!-- Service Cards Grid -->
+          <div class="grid grid-3">
+            <div class="service-card">
+              <div class="service-card-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="service-card-content">
+                <h3>Management & Facilitation Support</h3>
+                <p>
+                  Strategic guidance to improve your management processes,
+                  streamline operations, and facilitate effective team
+                  collaboration.
+                </p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="service-card-content">
+                <h3>Operational Reviews</h3>
+                <p>
+                  Comprehensive analysis of your business operations to identify
+                  inefficiencies, reduce costs, and improve overall performance.
+                </p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="service-card-content">
+                <h3>Security Consultation</h3>
+                <p>
+                  Expert security assessments and recommendations to protect your
+                  business assets, data, and physical premises.
+                </p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon">
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <div class="service-card-content">
+                <h3>Administrative Services</h3>
+                <p>
+                  Professional administrative support to help you manage daily
+                  operations, documentation, and compliance requirements.
+                </p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon">
+                <i class="fas fa-file-invoice-dollar"></i>
+              </div>
+              <div class="service-card-content">
+                <h3>Independent Financial Audits</h3>
+                <p>
+                  Thorough financial audits to ensure accuracy, compliance, and
+                  identify opportunities for financial optimization.
+                </p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <div class="service-card-content">
+                <h3>Business Development</h3>
+                <p>
+                  We connect clients to opportunities for new business,
+                  partnerships, and growth strategies tailored to your industry.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p style="text-align: center; margin-top: var(--spacing-xl); font-style: italic;">
+            Please feel free to inquire about a service if you do not see it
+            listed. If it is not a service we provide, we would be more than
+            happy to refer you to a qualified professional.
+          </p>
+        </div>
+      </section>
+
+      <!-- Schedule Appointments Section -->
+      <section class="section-gray">
+        <div class="container">
+          <h2 class="section-title">Schedule an Appointment</h2>
+          <p class="text-center mb-lg">
+            Book a 1-hour introductory meeting to discuss how we can help your
+            business succeed.
+          </p>
+
+          <div class="grid grid-3">
+            <!-- Tax Preparation -->
+            <div class="service-card text-center">
+              <img
+                src="images/taxp.jpg"
+                alt="Tax Preparation"
+                style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);"
+              />
+              <h4>Tax Preparation</h4>
+              <p>
+                Professional tax services for individuals and businesses. Full
+                preparation and planning support.
+              </p>
+              <a href="./contact.html" class="btn-primary">Contact Us</a>
+            </div>
+
+            <!-- Notary Public -->
+            <div class="service-card text-center">
+              <img
+                src="images/notary.jpg"
+                alt="Notary Public"
+                style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);"
+              />
+              <h4>Notary Public</h4>
+              <p>
+                Certified notary services for all your document authentication
+                and verification needs.
+              </p>
+              <a href="./contact.html" class="btn-primary">Contact Us</a>
+            </div>
+
+            <!-- Admin Consulting -->
+            <div class="service-card text-center">
+              <img
+                src="images/acs.jpg"
+                alt="Admin Consulting"
+                style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);"
+              />
+              <h4>Admin Consulting Services</h4>
+              <p>
+                Streamline your administrative processes and improve operational
+                efficiency.
+              </p>
+              <a href="./contact.html" class="btn-primary">Contact Us</a>
+            </div>
+
+            <!-- Security Consultation -->
+            <div class="service-card text-center">
+              <img
+                src="images/security.jpg"
+                alt="Security Consultation"
+                style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);"
+              />
+              <h4>Security Consultation</h4>
+              <p>
+                Comprehensive security assessments and solutions to protect your
+                business.
+              </p>
+              <a href="./contact.html" class="btn-primary">Contact Us</a>
+            </div>
+
+            <!-- Real Estate -->
+            <div class="service-card text-center">
+              <img
+                src="images/realestate.jpg"
+                alt="Real Estate"
+                style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: var(--spacing-md);"
+              />
+              <h4>Real Estate</h4>
+              <p>
+                Real estate consulting and support services for commercial and
+                residential properties.
+              </p>
+              <a href="./contact.html" class="btn-primary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section-light">
+        <div class="container text-center">
+          <h2 class="section-title">Ready to Transform Your Business?</h2>
+          <p style="max-width: 600px; margin: 0 auto var(--spacing-lg); font-size: 1.1rem;">
+            Contact us today for a free consultation and discover how our
+            consulting services can help your business thrive.
+          </p>
+          <a href="./contact.html" class="btn-primary">Contact Us Today</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d1 w3-center">
+      <p>Dimar Consulting & Investment Group LLC</p>
+      <p style="font-size: 0.9rem; opacity: 0.8;">
+        Professional Tax Preparation • Business Consulting • Notary Services
+      </p>
+
+      <!-- Go To Top button -->
+      <div class="go-top-container">
+        <a
+          href="#top"
+          class="w3-button w3-theme"
+          aria-label="Go to top"
+          title="Go to top"
+        >
+          <span class="tooltip-text">Go To Top</span>
+          <span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i>
+          </span>
+        </a>
+      </div>
+    </footer>
+
+    <script src="./scripts/collapsible-hamburger-menu.js"></script>
+    <script src="./scripts/dark-mode-toggle.js"></script>
   </body>
 </html>

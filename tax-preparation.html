@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Preparation Services - Dimar Consulting</title>
+    <meta
+      name="description"
+      content="Professional tax preparation services for individuals, small businesses, and corporations. Expert tax planning and compliance assistance."
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/collapsible-hamburger-menu.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <div class="w3-bar w3-light-gray w3-center" id="top">
+      <!-- Company Logo (left side) -->
+      <a href="./index.html" class="w3-bar-item w3-left logo-link">
+        <img
+          src="./images/logo.png"
+          alt="Dimar Consulting & Investment Group LLC Logo"
+          class="navbar-logo"
+        />
+      </a>
+      <!-- Desktop Menu Items (hidden on small screens) -->
+      <div class="menu-center w3-hide-small">
+        <a
+          href="./index.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Home</a
+        >
+        <a
+          href="./consulting.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Consulting</a
+        >
+        <a
+          href="./tax-preparation.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Tax Preparation</a
+        >
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Why Dimar?</a
+        >
+        <a
+          href="./contact.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Contact</a
+        >
+      </div>
+
+      <!-- Dark Mode Toggle Icon -->
+      <button
+        id="darkModeToggle"
+        class="w3-bar-item w3-button w3-right"
+        title="Toggle dark mode"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fa fa-moon" aria-hidden="true"></i>
+      </button>
+
+      <!-- Hamburger Icon (right side, visible only on small screens) -->
+      <button
+        class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large menu-toggle"
+        aria-controls="smallMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        onclick="toggleMenu()"
+      >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Collapsible Mobile Menu -->
+    <div
+      id="smallMenu"
+      class="w3-bar-block w3-light-gray w3-hide w3-hide-medium w3-hide-large w3-center"
+      aria-hidden="true"
+    >
+      <a
+        href="./index.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Home</a
+      >
+      <a
+        href="./consulting.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Consulting</a
+      >
+      <a
+        href="./tax-preparation.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Tax Preparation</a
+      >
+      <a
+        href="#"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Why Dimar?</a
+      >
+      <a
+        href="./contact.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Contact</a
+      >
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Tax Preparation Services</h1>
+        <p class="hero-subtitle">
+          Expert tax preparation for individuals, small businesses, and
+          corporations. Maximize your returns and stay compliant with confidence.
+        </p>
+        <a href="./contact.html" class="btn-primary">Schedule Consultation</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Service Overview Section -->
+      <section class="section-light">
+        <div class="container">
+          <h2 class="section-title">Professional Tax Services You Can Trust</h2>
+          <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-xl);">
+            At <strong>Dimar Consulting & Investment Group LLC</strong>, we
+            provide comprehensive tax preparation services designed to save you
+            time, reduce stress, and maximize your financial outcomes. Our
+            experienced team stays current with the latest tax laws and
+            regulations to ensure accuracy and optimal results.
+          </p>
+
+          <!-- Service Cards Grid -->
+          <div class="grid grid-3">
+            <div class="service-card">
+              <div class="service-card-icon">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="service-card-content">
+                <h3>Individual Tax Returns</h3>
+                <p>
+                  Personalized tax preparation for individuals and families.
+                  We'll help you identify all eligible deductions and credits.
+                </p>
+                <ul>
+                  <li>Federal and state returns</li>
+                  <li>Itemized deductions</li>
+                  <li>Investment income</li>
+                  <li>Rental property reporting</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="service-card-content">
+                <h3>Small Business Tax</h3>
+                <p>
+                  Comprehensive tax solutions for small businesses, sole
+                  proprietors, and partnerships.
+                </p>
+                <ul>
+                  <li>Business income & expenses</li>
+                  <li>Payroll tax compliance</li>
+                  <li>Quarterly estimates</li>
+                  <li>Multi-state filing</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="service-card-content">
+                <h3>Corporate Tax Returns</h3>
+                <p>
+                  Expert preparation of corporate tax returns with strategic tax
+                  planning to minimize liability.
+                </p>
+                <ul>
+                  <li>C-Corp & S-Corp returns</li>
+                  <li>Tax planning strategies</li>
+                  <li>Compliance management</li>
+                  <li>IRS representation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Process Section -->
+      <section class="section-gray">
+        <div class="container">
+          <h2 class="section-title">Our Tax Preparation Process</h2>
+          <p style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-xl);">
+            We've streamlined our tax preparation process to make it as simple
+            and stress-free as possible for you.
+          </p>
+
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="process-number">1</div>
+              <div class="process-content">
+                <h4>Initial Consultation</h4>
+                <p>
+                  We start with a complimentary consultation to understand your
+                  tax situation, review your documents, and explain our services.
+                  This can be done in-person, over the phone, or via video call.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-number">2</div>
+              <div class="process-content">
+                <h4>Document Collection</h4>
+                <p>
+                  We'll provide you with a comprehensive checklist of documents
+                  needed. You can submit them securely through our portal, email,
+                  or bring them to our office. Common documents include W-2s,
+                  1099s, receipts, and prior year returns.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-number">3</div>
+              <div class="process-content">
+                <h4>Preparation & Review</h4>
+                <p>
+                  Our tax professionals will carefully prepare your return,
+                  ensuring all deductions and credits are applied. We'll conduct
+                  a thorough review to ensure accuracy and compliance with current
+                  tax laws.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-number">4</div>
+              <div class="process-content">
+                <h4>Your Review & Approval</h4>
+                <p>
+                  We'll schedule a meeting to walk you through your completed
+                  return, answer any questions, and explain the results. You'll
+                  review everything before we file.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-number">5</div>
+              <div class="process-content">
+                <h4>E-Filing & Follow-up</h4>
+                <p>
+                  Once approved, we'll electronically file your return for the
+                  fastest processing. We'll provide you with copies for your
+                  records and remain available for any questions or IRS
+                  correspondence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What to Bring Section -->
+      <section class="section-light">
+        <div class="container">
+          <h2 class="section-title">What Documents to Bring</h2>
+          <div class="grid grid-2">
+            <div>
+              <h3 class="text-primary">For Individuals:</h3>
+              <ul class="w3-ul w3-border-0">
+                <li>✓ Photo ID and Social Security cards</li>
+                <li>✓ W-2 forms from all employers</li>
+                <li>✓ 1099 forms (interest, dividends, contract work)</li>
+                <li>✓ Investment income statements</li>
+                <li>✓ Mortgage interest statements (1098)</li>
+                <li>✓ Property tax records</li>
+                <li>✓ Charitable donation receipts</li>
+                <li>✓ Medical expense receipts</li>
+                <li>✓ Education expenses (1098-T)</li>
+                <li>✓ Prior year tax returns</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-primary">For Businesses:</h3>
+              <ul class="w3-ul w3-border-0">
+                <li>✓ Profit & loss statements</li>
+                <li>✓ Balance sheets</li>
+                <li>✓ Business expense receipts</li>
+                <li>✓ Mileage logs</li>
+                <li>✓ Asset purchase documentation</li>
+                <li>✓ Payroll records (W-2s, W-3, 941s)</li>
+                <li>✓ 1099-MISC forms issued/received</li>
+                <li>✓ Bank statements</li>
+                <li>✓ Prior year business returns</li>
+                <li>✓ Partnership or corporate documents</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section class="section-gray">
+        <div class="container">
+          <h2 class="section-title">Transparent, Competitive Pricing</h2>
+          <div class="pricing-box">
+            <h3>
+              <i class="fas fa-calculator"></i> Customized Pricing Based on Your
+              Needs
+            </h3>
+            <p class="pricing-note">
+              Every tax situation is unique. Our pricing is based on the
+              complexity of your return, the time required, and the services you
+              need. We'll provide you with a clear quote during your initial
+              consultation—no hidden fees or surprises.
+            </p>
+            <div style="margin-top: var(--spacing-lg);">
+              <p>
+                <strong>Typical Individual Returns:</strong> Starting at $150
+              </p>
+              <p>
+                <strong>Small Business Returns:</strong> Starting at $350
+              </p>
+              <p><strong>Corporate Returns:</strong> Custom quote</p>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: var(--spacing-lg);">
+            Contact us today for a free consultation and personalized quote.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section-light">
+        <div class="container">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div style="max-width: 900px; margin: 0 auto;">
+            <div class="faq-item">
+              <div class="faq-question">
+                When should I start preparing my taxes?
+              </div>
+              <div class="faq-answer">
+                We recommend starting as soon as you receive all your tax
+                documents, typically by late January or early February. This
+                gives us plenty of time to prepare an accurate return and helps
+                you receive any refund faster. However, we accept clients through
+                the April deadline and can file extensions if needed.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                How long does the tax preparation process take?
+              </div>
+              <div class="faq-answer">
+                For most individual returns, we can complete preparation within
+                3-7 business days once we have all your documents. Business and
+                corporate returns may take 1-2 weeks depending on complexity. We
+                also offer expedited service for urgent situations.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Can you help if I'm being audited by the IRS?
+              </div>
+              <div class="faq-answer">
+                Yes! We provide IRS representation services and can help you
+                navigate an audit. If we prepared your original return, we'll
+                stand behind our work. We can also assist with audits of returns
+                prepared by others.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                What if I haven't filed taxes in several years?
+              </div>
+              <div class="faq-answer">
+                We can help you get caught up. We'll work with you to prepare
+                back returns and develop a strategy to resolve any outstanding
+                tax liabilities. The sooner you address this, the better—contact
+                us for a confidential consultation.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Do you offer year-round tax planning?
+              </div>
+              <div class="faq-answer">
+                Absolutely! Tax planning shouldn't be a once-a-year activity. We
+                offer quarterly check-ins, estimated tax payment calculations, and
+                strategic planning to help minimize your tax liability throughout
+                the year.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                How do I securely share my documents with you?
+              </div>
+              <div class="faq-answer">
+                We take your privacy seriously. You can submit documents via our
+                secure client portal, encrypted email, or bring physical copies to
+                our office. We use industry-standard encryption and security
+                protocols to protect your sensitive information.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Badges Section -->
+      <section class="section-gray">
+        <div class="container">
+          <h2 class="section-title">Why Choose Dimar Consulting?</h2>
+          <div class="trust-badges">
+            <div class="trust-badge">
+              <div class="trust-badge-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="trust-badge-text">Licensed & Certified</div>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="trust-badge-text">100% Accuracy Guaranteed</div>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="trust-badge-text">Year-Round Support</div>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon">
+                <i class="fas fa-hand-holding-usd"></i>
+              </div>
+              <div class="trust-badge-text">Maximum Refund</div>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: var(--spacing-xl); font-size: 1.1rem;">
+            <strong
+              >At DIMAR Consulting and Investment Group, we take your money as
+              seriously as we take our credibility!</strong
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section-light">
+        <div class="container text-center">
+          <h2 class="section-title">Ready to Get Started?</h2>
+          <p style="max-width: 600px; margin: 0 auto var(--spacing-lg); font-size: 1.1rem;">
+            Don't let tax season stress you out. Let our expert team handle your
+            tax preparation while you focus on what matters most.
+          </p>
+          <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+            <a href="./contact.html" class="btn-primary"
+              >Schedule Free Consultation</a
+            >
+            <a href="./schedule.html" class="btn-secondary"
+              >Book Appointment Online</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d1 w3-center">
+      <p>Dimar Consulting & Investment Group LLC</p>
+      <p style="font-size: 0.9rem; opacity: 0.8;">
+        Professional Tax Preparation • Business Consulting • Notary Services
+      </p>
+
+      <!-- Go To Top button -->
+      <div class="go-top-container">
+        <a
+          href="#top"
+          class="w3-button w3-theme"
+          aria-label="Go to top"
+          title="Go to top"
+        >
+          <span class="tooltip-text">Go To Top</span>
+          <span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i>
+          </span>
+        </a>
+      </div>
+    </footer>
+
+    <script src="./scripts/collapsible-hamburger-menu.js"></script>
+    <script src="./scripts/dark-mode-toggle.js"></script>
+  </body>
+</html>
+

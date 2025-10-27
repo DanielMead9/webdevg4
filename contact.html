@@ -18,7 +18,7 @@
       <!-- Company Logo (left side) -->
       <a href="./index.html" class="w3-bar-item w3-left logo-link">
         <img
-          src="./images/logo.avif"
+          src="./images/logo.png"
           alt="Dimar Consulting & Investment Group LLC Logo"
           class="navbar-logo"
         />
@@ -36,7 +36,7 @@
           >Consulting</a
         >
         <a
-          href="#"
+          href="./tax-preparation.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Tax Preparation</a
         >
@@ -91,7 +91,7 @@
         >Consulting</a
       >
       <a
-        href="#"
+        href="./tax-preparation.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Tax Preparation</a
       >
@@ -106,130 +106,221 @@
         >Contact</a
       >
     </div>
-    <header>
-      <!-- Image Header -->
-      <div class="w3-display-container w3-animate-opacity">
-        <img
-          src="/images/home-banner.avif"
-          alt="banner"
-          style="width: 100%; min-height: 350px; max-height: 600px"
-        />
-        <div class="w3-container w3-display-bottomleft w3-margin-bottom">
-          <button
-            onclick="document.getElementById('id01').style.display='block'"
-            class="w3-button w3-xlarge w3-theme w3-hover-teal"
-            title="Go To W3.CSS"
-          >
-            Contact
-          </button>
-        </div>
-      </div>
-
-      <!-- Modal -->
-      <div id="id01" class="w3-modal">
-        <div class="w3-modal-content w3-card-4 w3-animate-top">
-          <header class="w3-container w3-teal w3-display-container">
-            <span
-              onclick="document.getElementById('id01').style.display='none'"
-              class="w3-button w3-teal w3-display-topright"
-              ><i class="fa fa-remove"></i
-            ></span>
-            <h4>Oh snap! We just showed you a modal..</h4>
-            <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-          </header>
-          <div class="w3-container">
-            <p>Cool huh? Ok, enough teasing around..</p>
-            <p>
-              Go to our
-              <a class="w3-text-teal" href="/w3css/default.asp"
-                >W3.CSS Tutorial</a
-              >
-              to learn more!
-            </p>
-          </div>
-          <footer class="w3-container w3-teal">
-            <p>Modal footer</p>
-          </footer>
-        </div>
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Contact Us</h1>
+        <p class="hero-subtitle">
+          We're here to assist you. Reach out by phone, email, or use our
+          contact form below.
+        </p>
       </div>
     </header>
+
     <main>
-      <!-- Contact Container -->
-      <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
-        <div class="w3-row">
-          <div class="w3-col m5">
-            <div class="w3-padding-16">
-              <span class="w3-xlarge w3-border-teal w3-bottombar"
-                >Contact Us</span
-              >
+      <!-- Contact Information Section -->
+      <section class="section-light">
+        <div class="container">
+          <h2 class="section-title">Get in Touch</h2>
+
+          <div class="grid grid-2" style="margin-bottom: var(--spacing-xxl);">
+            <!-- Contact Info Card -->
+            <div>
+              <div class="service-card">
+                <h3 class="text-primary">
+                  <i class="fas fa-building"></i> Office Information
+                </h3>
+                <div style="margin-top: var(--spacing-lg);">
+                  <p style="margin-bottom: var(--spacing-md);">
+                    <i class="fa fa-map-marker" style="color: var(--primary-color); font-size: 1.2rem; width: 30px;"></i>
+                    <strong>Address:</strong><br />
+                    <span style="margin-left: 30px;">Lawrence, MA</span>
+                  </p>
+                  <p style="margin-bottom: var(--spacing-md);">
+                    <i class="fa fa-phone" style="color: var(--primary-color); font-size: 1.2rem; width: 30px;"></i>
+                    <strong>Phone:</strong><br />
+                    <span style="margin-left: 30px;">Contact us for details</span>
+                  </p>
+                  <p style="margin-bottom: var(--spacing-md);">
+                    <i class="fa fa-envelope" style="color: var(--primary-color); font-size: 1.2rem; width: 30px;"></i>
+                    <strong>Email:</strong><br />
+                    <span style="margin-left: 30px;">info@dimarconsulting.com</span>
+                  </p>
+                  <p style="margin-bottom: var(--spacing-md);">
+                    <i class="fa fa-clock" style="color: var(--primary-color); font-size: 1.2rem; width: 30px;"></i>
+                    <strong>Business Hours:</strong><br />
+                    <span style="margin-left: 30px;">Monday - Friday: 9:00 AM - 6:00 PM</span><br />
+                    <span style="margin-left: 30px;">Saturday: By Appointment</span><br />
+                    <span style="margin-left: 30px;">Sunday: Closed</span>
+                  </p>
+                </div>
+              </div>
+
+              <div style="margin-top: var(--spacing-lg);">
+                <h4 class="text-primary">Prefer to Schedule Directly?</h4>
+                <p>Book an appointment for any of our services:</p>
+                <a href="./schedule.html" class="btn-primary">Schedule Appointment</a>
+              </div>
             </div>
-            <h3>Address</h3>
-            <p>Swing by for a cup of coffee, or whatever.</p>
-            <p>
-              <i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago,
-              US
-            </p>
-            <p>
-              <i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515
-            </p>
-            <p>
-              <i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i
-              >  test@test.com
-            </p>
-          </div>
-          <div class="w3-col m7">
-            <form
-              class="w3-container w3-card-4 w3-padding-16 w3-white"
-              action="/action_page.php"
-              target="_blank"
-            >
-              <div class="w3-section">
-                <label>Name</label>
-                <input class="w3-input" type="text" name="Name" required />
+
+            <!-- Contact Form -->
+            <div>
+              <div class="service-card">
+                <h3 class="text-primary">
+                  <i class="fas fa-envelope"></i> Send Us a Message
+                </h3>
+                <form
+                  style="margin-top: var(--spacing-lg);"
+                  action="#"
+                  method="post"
+                >
+                  <div style="margin-bottom: var(--spacing-md);">
+                    <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600;">
+                      Name <span style="color: red;">*</span>
+                    </label>
+                    <input
+                      class="w3-input w3-border w3-round"
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      style="padding: 12px;"
+                    />
+                  </div>
+
+                  <div style="margin-bottom: var(--spacing-md);">
+                    <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600;">
+                      Email <span style="color: red;">*</span>
+                    </label>
+                    <input
+                      class="w3-input w3-border w3-round"
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      style="padding: 12px;"
+                    />
+                  </div>
+
+                  <div style="margin-bottom: var(--spacing-md);">
+                    <label for="phone" style="display: block; margin-bottom: 8px; font-weight: 600;">
+                      Phone
+                    </label>
+                    <input
+                      class="w3-input w3-border w3-round"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      style="padding: 12px;"
+                    />
+                  </div>
+
+                  <div style="margin-bottom: var(--spacing-md);">
+                    <label for="service" style="display: block; margin-bottom: 8px; font-weight: 600;">
+                      Service Interested In
+                    </label>
+                    <select
+                      class="w3-input w3-border w3-round"
+                      id="service"
+                      name="service"
+                      style="padding: 12px;"
+                    >
+                      <option value="">Select a service...</option>
+                      <option value="tax-preparation">Tax Preparation</option>
+                      <option value="consulting">Business Consulting</option>
+                      <option value="notary">Notary Public</option>
+                      <option value="admin">Administrative Services</option>
+                      <option value="security">Security Consultation</option>
+                      <option value="real-estate">Real Estate</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div style="margin-bottom: var(--spacing-md);">
+                    <label for="message" style="display: block; margin-bottom: 8px; font-weight: 600;">
+                      Message <span style="color: red;">*</span>
+                    </label>
+                    <textarea
+                      class="w3-input w3-border w3-round"
+                      id="message"
+                      name="message"
+                      rows="5"
+                      required
+                      style="padding: 12px; resize: vertical;"
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn-primary" style="width: 100%;">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                  </button>
+                </form>
               </div>
-              <div class="w3-section">
-                <label>Email</label>
-                <input class="w3-input" type="text" name="Email" required />
-              </div>
-              <div class="w3-section">
-                <label>Message</label>
-                <input class="w3-input" type="text" name="Message" required />
-              </div>
-              <input class="w3-check" type="checkbox" checked name="Like" />
-              <label>I Like it!</label>
-              <button type="submit" class="w3-button w3-right w3-theme">
-                Send
-              </button>
-            </form>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Image of location/map -->
-      <img
-        src="/w3images/map.jpg"
-        class="w3-image w3-greyscale-min"
-        style="width: 100%"
-      />
+      <!-- Why Contact Us Section -->
+      <section class="section-gray">
+        <div class="container">
+          <h2 class="section-title">Why Choose Dimar Consulting?</h2>
+          <div class="trust-badges">
+            <div class="trust-badge">
+              <div class="trust-badge-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div class="trust-badge-text">Professional Service</div>
+              <p style="margin-top: 8px; color: #666;">Experienced consultants dedicated to your success</p>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <div class="trust-badge-text">Personal Relationships</div>
+              <p style="margin-top: 8px; color: #666;">We build lasting partnerships with our clients</p>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="trust-badge-text">Results-Driven</div>
+              <p style="margin-top: 8px; color: #666;">Focused on achieving your business goals</p>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: var(--spacing-xl); font-size: 1.1rem;">
+            <strong>
+              At DIMAR Consulting and Investment Group, we take your money as
+              seriously as we take our credibility!
+            </strong>
+          </p>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d1 w3-center">
+      <p>Dimar Consulting & Investment Group LLC</p>
+      <p style="font-size: 0.9rem; opacity: 0.8;">
+        Professional Tax Preparation • Business Consulting • Notary Services
+      </p>
+
+      <!-- Go To Top button -->
+      <div class="go-top-container">
+        <a
+          href="#top"
+          class="w3-button w3-theme"
+          aria-label="Go to top"
+          title="Go to top"
+        >
+          <span class="tooltip-text">Go To Top</span>
+          <span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i>
+          </span>
+        </a>
+      </div>
+    </footer>
 
     <script src="./scripts/collapsible-hamburger-menu.js"></script>
     <script src="./scripts/dark-mode-toggle.js"></script>
-
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-small w3-theme-d1 w3-center">
-      <p>Dimar Consulting & Investment Group LLC</p>
-
-      <div
-        style="position: relative; bottom: 100px; z-index: 1"
-        class="w3-tooltip w3-right"
-      >
-        <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
-        <a class="w3-button w3-theme" href="#top"
-          ><span class="w3-xlarge">
-            <i class="fa fa-chevron-circle-up"></i></span
-        ></a>
-      </div>
-    </footer>
   </body>
 </html>
