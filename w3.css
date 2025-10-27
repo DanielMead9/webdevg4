@@ -544,7 +544,7 @@ a {
   width: 8.33333%;
 }
 .w3-col.s2 {
-  width: 19.1%;
+  width: 16.33333%;
 }
 .w3-col.s3 {
   width: 24.99999%;
@@ -1427,8 +1427,8 @@ w3-hover-cobalt:hover {
   background-color: #87794e !important;
 }
 .w3-danger {
-  color: #fff !important;
-  background-color: #dd0000 !important;
+  color: #000 !important;
+  background-color: #e10b0b !important;
 }
 .w3-note {
   color: #000 !important;
@@ -1705,4 +1705,138 @@ w3-hover-cobalt:hover {
 .w3-border-pale-blue,
 .w3-hover-border-pale-blue:hover {
   border-color: #e7ffff !important;
+}
+
+.service-img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  display: inline-block;
+}
+
+.service-box {
+  margin: 8px; /* adjust this number for larger/smaller gaps */
+  border-radius: 6px; /* optional: soften the box edges */
+}
+
+.service-box:hover {
+  opacity: 0.95;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-toggle {
+  font-size: 22px;
+  padding: 12px 16px;
+}
+/* ensure menu items appear centered inline */
+.menu-center {
+  display: inline-block;
+}
+
+.x-margin-small {
+  margin: 4px;
+}
+
+/* Custom background section */
+.bg-consulting {
+  background-image: url("images/Consultingpic.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px; /* adjust as needed */
+}
+
+/* Add a dark overlay effect for readability (optional) */
+.bg-consulting::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* darkens background slightly */
+  z-index: 0;
+}
+
+/* Make sure text sits above the overlay */
+.bg-consulting h2,
+.bg-consulting p {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Calendar Grid --- */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- Calendar Headers --- */
+.calendar-header {
+  font-weight: bold;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* --- Calendar Cells --- */
+.calendar-day {
+  cursor: pointer;
+  padding: 16px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  min-height: 60px;
+}
+
+.calendar-day:hover {
+  background-color: #f1f1f1;
+}
+
+.today {
+  background-color: #d9edf7 !important;
+}
+
+.selected {
+  border: 2px solid #2196f3 !important;
+  background-color: #e3f2fd !important;
+}
+
+.past {
+  color: #aaa !important;
+  background-color: #f9f9f9 !important;
+  cursor: not-allowed !important;
+}
+
+.empty {
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+/* --- Time Slots --- */
+.time-slot {
+  margin: 4px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  #calendar {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .calendar-day {
+    padding: 12px;
+  }
 }
