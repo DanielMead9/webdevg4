@@ -1,0 +1,159 @@
+/* Additional styles */
+
+/* Logo appearance */
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* Keep logo aligned with nav items */
+.logo-link {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* Adjust layout to avoid crowding on mobile */
+@media (max-width: 600px) {
+  .navbar-logo {
+    height: 32px;
+  }
+}
+
+/* Invert logo in dark mode */
+body.dark-mode .navbar-logo {
+  filter: invert(1) hue-rotate(180deg);
+}
+/* --- Icon Styling --- */
+#darkModeToggle i,
+.menu-toggle i {
+  font-size: 24px; /* same size for both icons */
+  vertical-align: middle;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+
+/* Dark mode overrides */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Make navigation bar dark */
+body.dark-mode .w3-bar {
+  background-color: #222 !important;
+}
+
+/* Make all menu links white in dark mode */
+body.dark-mode .w3-bar-item.w3-button {
+  color: white !important;
+  border-color: #4da3ff !important;
+}
+
+/* Invert icons in dark mode */
+body.dark-mode #darkModeToggle i,
+body.dark-mode .menu-toggle i {
+  color: white;
+}
+
+/* Optional: add hover style for clarity */
+body.dark-mode .w3-bar-item.w3-button:hover {
+  background-color: #333 !important;
+}
+
+body.dark-mode .w3-light-gray {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .w3-white {
+  background-color: #222 !important;
+  color: #eee;
+}
+
+body.dark-mode .w3-card {
+  background-color: #2a2a2a !important;
+}
+
+body.dark-mode .w3-theme,
+body.dark-mode .w3-teal {
+  background-color: #00695c !important;
+  color: #fff !important;
+}
+
+body.dark-mode footer {
+  background-color: #111 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hover-color {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.hover-color:hover {
+  filter: grayscale(0%);
+}
+
+/* Dark mode styling for contrast */
+body.dark-mode #welcome {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .w3-button.w3-blue {
+  background-color: #2196f3;
+  color: white;
+}
+
+footer {
+  position: relative;
+}
+
+/* Go To Top button styling */
+.go-top-container {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Smooth hover movement */
+.go-top-container a {
+  position: relative; /* needed for tooltip */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Tooltip text */
+.tooltip-text {
+  visibility: hidden;
+  background-color: #008080; /* same as w3-teal */
+  color: #fff;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: absolute;
+  right: 100%; /* show to the left of button */
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+/* Show tooltip on hover */
+.go-top-container a:hover {
+  visibility: visible;
+}
