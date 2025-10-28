@@ -4,20 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consulting</title>
-    <link rel="stylesheet" href="w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/w3.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <script src="hamburger.js"></script>
-    <div class="w3-bar w3-light-gray w3-center">
+    <!-- Top Navigation Bar -->
+    <div class="w3-bar w3-light-gray w3-center" id="top">
+      <!-- Company Logo (left side) -->
+      <a href="./index.html" class="w3-bar-item w3-left logo-link">
+        <img
+          src="./images/logo.png"
+          alt="Dimar Consulting & Investment Group LLC Logo"
+          class="navbar-logo"
+        />
+      </a>
       <!-- Desktop Menu Items (hidden on small screens) -->
       <div class="menu-center w3-hide-small">
         <a
-          href="index.html"
+          href="./index.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Home</a
         >
         <a
-          href="consulting.html"
+          href="./consulting.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Consulting</a
         >
@@ -29,11 +42,24 @@
         <a
           href="#"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Why Dimar?</a
+        >
+        <a
+          href="./contact.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Contact</a
         >
-
-        <img src="images/logo.png" alt="Company Logo" />
       </div>
+
+      <!-- Dark Mode Toggle Icon -->
+      <button
+        id="darkModeToggle"
+        class="w3-bar-item w3-button w3-right"
+        title="Toggle dark mode"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fa fa-moon" aria-hidden="true"></i>
+      </button>
 
       <!-- Hamburger Icon (right side, visible only on small screens) -->
       <button
@@ -54,37 +80,53 @@
       aria-hidden="true"
     >
       <a
-        href="index.html"
+        href="./index.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Home</a
       >
       <a
-        href="consulting.html"
+        href="./consulting.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Consulting</a
       >
       <a
         href="#"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
-        >Tax Preperation</a
+        >Tax Preparation</a
       >
       <a
         href="#"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Why Dimar?</a
+      >
+      <a
+        href="./contact.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Contact</a
       >
-      <img src="images/logo.png" alt="Company Logo" />
     </div>
+    <script src="./scripts/collapsible-hamburger-menu.js"></script>
+    <script src="./scripts/dark-mode-toggle.js"></script>
 
-    <div
-      class="w3-container w3-center w3-padding-64 w3-text-white bg-consulting"
-    >
-      <h2 class="w3-xxlarge">Consulting</h2>
-      <p class="w3-large">
-        Helping businesses streamline their operations and grow efficiently.
-      </p>
-    </div>
-
+    <header>
+      <!-- Image Header -->
+      <div class="w3-display-container w3-animate-opacity">
+        <img
+          class="bg-consulting"
+          src="/images/Consultingpic.avif"
+          alt="banner"
+        />
+        <!-- Centered text and button -->
+        <div class="w3-display-middle w3-center">
+          <h2 class="w3-xxlarge w3-bold w3-text-white w3-wide w3-animate-top">
+            Consulting
+          </h2>
+          <h4 class="w3-xlarge w3-bold w3-text-white w3-wide w3-animate-top">
+            Helping businesses streamline their operations and grow efficiently.
+          </h4>
+        </div>
+      </div>
+    </header>
     <div
       class="w3-container w3-margin-top w3-padding-16 w3-margin-right w3-margin-left"
     >
@@ -111,89 +153,121 @@
     </div>
 
     <!-- Schedule Section -->
-    <div
-      class="w3-container w3-margin-top w3-padding-16 w3-light-gray w3-margin-right w3-margin-left"
-    >
-      <h2 class="w3-center">Schedule An Appointment</h2>
-      <p class="w3-center">
-        The meetings are an introductory meeting and will take about 1 hour.
-      </p>
+    <div class="schedule">
+      <div
+        class="w3-container w3-margin-top w3-padding-16 w3-light-gray w3-margin-right w3-margin-left"
+      >
+        <h2 class="w3-center">Schedule An Appointment</h2>
+        <p class="w3-center">
+          The meetings are an introductory meeting and will take about 1 hour.
+        </p>
 
-      <div class="w3-row-padding w3-padding-16 service-row">
-        <!-- Tax Preparation -->
-        <div class="w3-col l2 m4 s12 w3-center w3-padding w3-cyan service-box">
-          <h4>Tax Preparation</h4>
-          <img src="images/taxp.jpg" alt="Tax Icon" class="service-img" />
-          <a
-            href="schedule.html?service=Tax Preparation"
-            class="w3-button w3-blue w3-margin-top"
-            >Schedule Now</a
+        <div class="w3-row-padding w3-padding-16 service-row">
+          <!-- Tax Preparation -->
+          <div
+            class="w3-col l2 m4 s12 w3-center w3-padding w3-cyan service-box"
           >
-        </div>
+            <h4>Tax Preparation</h4>
+            <img src="images/taxp.jpg" alt="Tax Icon" class="service-img" />
+            <a
+              href="schedule.html?service=Tax Preparation"
+              class="w3-button w3-blue w3-margin-top"
+              >Schedule Now</a
+            >
+          </div>
 
-        <!-- Notary Public -->
-        <div
-          class="w3-col l2 m4 s12 w3-center w3-padding w3-orange service-box"
-        >
-          <h4>Notary Public</h4>
-          <img src="images/notary.jpg" alt="Notary Icon" class="service-img" />
-          <a
-            href="schedule.html?service=Notary Public"
-            class="w3-button w3-blue w3-margin-top"
-            >Schedule Now</a
+          <!-- Notary Public -->
+          <div
+            class="w3-col l2 m4 s12 w3-center w3-padding w3-orange service-box"
           >
-        </div>
+            <h4>Notary Public</h4>
+            <img
+              src="images/notary.jpg"
+              alt="Notary Icon"
+              class="service-img"
+            />
+            <a
+              href="schedule.html?service=Notary Public"
+              class="w3-button w3-blue w3-margin-top"
+              >Schedule Now</a
+            >
+          </div>
 
-        <!-- Admin Consulting Services -->
-        <div
-          class="w3-col l2 m4 s12 w3-center w3-padding w3-light-green service-box"
-        >
-          <h4>Admin Consulting Services</h4>
-          <img src="images/acs.jpg" alt="Consulting Icon" class="service-img" />
-          <a
-            href="schedule.html?service=Admin Consulting Services"
-            class="w3-button w3-blue w3-margin-top"
-            >Schedule Now</a
+          <!-- Admin Consulting Services -->
+          <div
+            class="w3-col l2 m4 s12 w3-center w3-padding w3-light-green service-box"
           >
-        </div>
+            <h4>Admin Consulting Services</h4>
+            <img
+              src="images/acs.jpg"
+              alt="Consulting Icon"
+              class="service-img"
+            />
+            <a
+              href="schedule.html?service=Admin Consulting Services"
+              class="w3-button w3-blue w3-margin-top"
+              >Schedule Now</a
+            >
+          </div>
 
-        <!-- Security Consultation -->
-        <div
-          class="w3-col l2 m4 s12 w3-center w3-padding w3-yellow service-box"
-        >
-          <h4>Security Consultation</h4>
-          <img
-            src="images/security.jpg"
-            alt="Security Icon"
-            class="service-img"
-          />
-          <a
-            href="schedule.html?service=Security Consultation"
-            class="w3-button w3-blue w3-margin-top"
-            >Schedule Now</a
+          <!-- Security Consultation -->
+          <div
+            class="w3-col l2 m4 s12 w3-center w3-padding w3-yellow service-box"
           >
-        </div>
+            <h4>Security Consultation</h4>
+            <img
+              src="images/security.jpg"
+              alt="Security Icon"
+              class="service-img"
+            />
+            <a
+              href="schedule.html?service=Security Consultation"
+              class="w3-button w3-blue w3-margin-top"
+              >Schedule Now</a
+            >
+          </div>
 
-        <!-- Real Estate -->
-        <div
-          class="w3-col l2 m4 s12 w3-center w3-padding w3-danger service-box"
-        >
-          <h4>Real Estate</h4>
-          <img
-            src="images/realestate.jpg"
-            alt="Real Estate Icon"
-            class="service-img"
-          />
-          <a
-            href="schedule.html?service=Real Estate"
-            class="w3-button w3-blue w3-margin-top"
-            >Schedule Now</a
+          <!-- Real Estate -->
+          <div
+            class="w3-col l2 m4 s12 w3-center w3-padding w3-danger service-box"
           >
+            <h4>Real Estate</h4>
+            <img
+              src="images/realestate.jpg"
+              alt="Real Estate Icon"
+              class="service-img"
+            />
+            <a
+              href="schedule.html?service=Real Estate"
+              class="w3-button w3-blue w3-margin-top"
+              >Schedule Now</a
+            >
+          </div>
+          <!-- End Real Estate -->
         </div>
-        <!-- End Real Estate -->
+        <!-- End Service Row -->
       </div>
-      <!-- End Service Row -->
+      <!-- End Schedule Section -->
     </div>
-    <!-- End Schedule Section -->
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d1 w3-center">
+      <p>Dimar Consulting & Investment Group LLC</p>
+
+      <!-- Go To Top button -->
+      <div class="go-top-container">
+        <a
+          href="#top"
+          class="w3-button w3-theme"
+          aria-label="Go to top"
+          title="Go to top"
+        >
+          <span class="tooltip-text">Go To Top</span>
+          <span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i>
+          </span>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

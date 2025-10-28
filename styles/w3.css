@@ -1746,28 +1746,10 @@ w3-hover-cobalt:hover {
 }
 
 /* Custom background section */
-.bg-consulting {
-  background-image: url("images/Consultingpic.avif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+img.bg-consulting {
   min-height: 300px; /* adjust as needed */
-}
-
-/* Add a dark overlay effect for readability (optional) */
-.bg-consulting::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* darkens background slightly */
-  z-index: 0;
-}
-
-/* Make sure text sits above the overlay */
-.bg-consulting h2,
-.bg-consulting p {
-  position: relative;
-  z-index: 1;
+  width: 100%;
+  max-height: 500px;
 }
 
 /* --- Calendar Grid --- */
@@ -1839,4 +1821,110 @@ w3-hover-cobalt:hover {
   .calendar-day {
     padding: 12px;
   }
+}
+
+/* ---------- DARK MODE TOGGLE ---------- */
+
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+.dark-mode header {
+  background-color: #1a237e;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Calendar container */
+.dark-mode #calendar {
+  background-color: #1e1e1e;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+/* Month header + navigation buttons */
+.dark-mode .calendar-header {
+  background-color: #1e1e1e;
+  color: #90caf9;
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+}
+
+.dark-mode .calendar-header button {
+  background-color: #333;
+  color: #f1f1f1;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.dark-mode .calendar-header button:hover {
+  background-color: #444;
+}
+
+/* Day names (Sun–Sat) */
+.dark-mode .day-name {
+  background-color: #2b2b2b;
+  color: #90caf9;
+  border-bottom: 1px solid #444;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Day cells */
+.dark-mode .day {
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover + selected states */
+.dark-mode .day:hover {
+  background-color: #333;
+}
+
+/* Today's date */
+.dark-mode .today {
+  border: 2px solid #64b5f6;
+  background-color: #263238;
+  color: #bbdefb;
+}
+
+/* Empty filler cells (unselectable days) */
+.dark-mode #calendar > div:empty {
+  background-color: #181818 !important;
+  border: 1px solid #222;
+  color: #555;
+  cursor: default;
+  transition: background-color 0.3s;
+}
+
+/* Time slot buttons */
+.dark-mode #timeSlots button {
+  background-color: #3949ab;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.dark-mode #timeSlots button:hover {
+  background-color: #5c6bc0;
+}
+
+/* Weekend "no slots" text */
+.dark-mode #timeSlots p {
+  color: #ef5350;
+}
+
+/* General link color */
+.dark-mode a {
+  color: #90caf9;
+}
+
+.dark-mode schedule {
+  color: #fff;
 }
