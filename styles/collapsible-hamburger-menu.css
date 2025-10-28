@@ -1,0 +1,12 @@
+.menu-toggle {
+  font-size: 22px;
+  padding: 12px 16px;
+}
+/* ensure menu items appear centered inline */
+.menu-center {
+  display: inline-block;
+}
+
+.x-margin-small {
+  margin: 4px;
+}

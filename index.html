@@ -3,21 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="w3.css" />
+    <title>Home - Dimar Consulting</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/collapsible-hamburger-menu.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <script src="hamburger.js"></script>
-    <div class="w3-bar w3-light-gray w3-center">
+    <!-- Top Navigation Bar -->
+    <div class="w3-bar w3-light-gray w3-center" id="top">
+      <!-- Company Logo (left side) -->
+      <a href="./index.html" class="w3-bar-item w3-left logo-link">
+        <img
+          src="./images/logo.png"
+          alt="Dimar Consulting & Investment Group LLC Logo"
+          class="navbar-logo"
+        />
+      </a>
       <!-- Desktop Menu Items (hidden on small screens) -->
       <div class="menu-center w3-hide-small">
         <a
-          href="index.html"
+          href="./index.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Home</a
         >
         <a
-          href="consulting.html"
+          href="./consulting.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Consulting</a
         >
@@ -29,10 +43,24 @@
         <a
           href="#"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Why Dimar?</a
+        >
+        <a
+          href="./contact.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Contact</a
         >
-        <img src="images/logo.png" alt="Company Logo" />
       </div>
+
+      <!-- Dark Mode Toggle Icon -->
+      <button
+        id="darkModeToggle"
+        class="w3-bar-item w3-button w3-right"
+        title="Toggle dark mode"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fa fa-moon" aria-hidden="true"></i>
+      </button>
 
       <!-- Hamburger Icon (right side, visible only on small screens) -->
       <button
@@ -53,26 +81,182 @@
       aria-hidden="true"
     >
       <a
-        href="index.html"
+        href="./index.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Home</a
       >
       <a
-        href="consulting.html"
+        href="./consulting.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Consulting</a
       >
       <a
         href="#"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
-        >Tax Preperation</a
+        >Tax Preparation</a
       >
       <a
         href="#"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Why Dimar?</a
+      >
+      <a
+        href="./contact.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Contact</a
       >
-      <img src="images/logo.png" alt="Company Logo" />
     </div>
+    <script src="./scripts/collapsible-hamburger-menu.js"></script>
+    <script src="./scripts/dark-mode-toggle.js"></script>
+    <header>
+      <!-- Image Header -->
+      <div class="w3-display-container w3-animate-opacity">
+        <img
+          src="/images/home/home-banner.avif"
+          alt="banner"
+          style="width: 100%; min-height: 350px; max-height: 600px"
+        />
+        <!-- Centered text and button -->
+        <div class="w3-display-middle w3-center">
+          <h1 class="w3-xxlarge w3-bold w3-text-white w3-wide w3-animate-top">
+            SUCCESS
+          </h1>
+          <h1 class="w3-xlarge w3-bold w3-text-white w3-wide w3-animate-top">
+            AND NOTHING LESS
+          </h1>
+          <a
+            href="#welcome"
+            class="w3-button w3-teal w3-large w3-margin-top w3-round"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Welcome Container -->
+      <section id="welcome" class="w3-row w3-padding-64 w3-light-gray">
+        <!-- Left: Image -->
+        <div class="w3-half w3-center">
+          <img
+            src="/images/home/graph-hover.png"
+            alt="Dimar Consulting Office"
+            class="w3-image w3-round hover-color"
+            style="max-width: 90%"
+          />
+        </div>
+
+        <!-- Right: Text -->
+        <div class="w3-half w3-padding-large">
+          <h1>Welcome to Dimar Consulting & Investment Group LLC</h1>
+          <p>
+            We are a new business located in Lawrence, MA, specializing in
+            consulting services for small businesses. <br />
+            Our mission is to provide our clients with business services that
+            help them become more successful and to become a leader in
+            consulting to small businesses.
+          </p>
+          <p>
+            We provide full services of tax preparation for individuals, small
+            businesses, and corporations. Our objective is to provide
+            high-quality tax preparation services to our clients and maintain a
+            personal relationship with our customers.
+          </p>
+          <p>
+            <strong
+              >At DIMAR Consulting and Investment Group we take your money as
+              seriously as we take our credibility!</strong
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Services Row -->
+      <section id="services" class="w3-row w3-padding-64">
+        <!-- Left: Text -->
+        <div class="w3-half w3-padding-large">
+          <h2>Our Services</h2>
+          <p>
+            At <strong>Dimar Consulting & Investment Group LLC</strong>, we
+            provide a wide range of financial and business services tailored to
+            help you grow and manage your success. Our experienced consultants
+            offer personalized solutions designed to meet the unique needs of
+            individuals, small businesses, and corporations. Our focus is
+            helping our clients attain their business goals and improve
+            performance. Some of our services include, but are not limited to:
+          </p>
+          <ul class="w3-ul w3-border-0">
+            <li>Consulting</li>
+            <li>Tax preparation</li>
+            <li>Managed Solutions</li>
+            <li>Business Plans</li>
+            <li>Operational Reviews</li>
+            <li>Strategic Planning</li>
+            <li>Notary Public</li>
+            <li>Security Consultant</li>
+            <li>Affidavits and More....</li>
+          </ul>
+
+          <a
+            href="./tax-preparation.html"
+            class="w3-button w3-blue w3-round-large w3-margin-top"
+          >
+            Learn More
+          </a>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="w3-half w3-center">
+          <img
+            src="/images/home/services-hover.png"
+            alt="Our Services"
+            class="w3-image w3-round hover-color"
+            style="max-width: 90%"
+          />
+        </div>
+      </section>
+
+      <!-- Contact Row -->
+      <section id="contact" class="w3-row w3-padding-64 w3-light-gray">
+        <!-- Left: Text -->
+        <div class="w3-half w3-padding-large">
+          <h2>Need more details? Contact us!</h2>
+          <p>
+            Need more details? Contact us We are here to assist. Contact us by
+            phone, email or via our social media channels.
+          </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="w3-half w3-center">
+          <a
+            href="./contact.html"
+            class="w3-button w3-blue w3-round-large w3-margin-top"
+          >
+            Contact Us
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d1 w3-center">
+      <p>Dimar Consulting & Investment Group LLC</p>
+
+      <!-- Go To Top button -->
+      <div class="go-top-container">
+        <a
+          href="#top"
+          class="w3-button w3-theme"
+          aria-label="Go to top"
+          title="Go to top"
+        >
+          <span class="tooltip-text">Go To Top</span>
+          <span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i>
+          </span>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
