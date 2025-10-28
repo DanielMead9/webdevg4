@@ -4,21 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Book an Appointment</title>
-    <link rel="stylesheet" href="w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/w3.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
 
   <body class="w3-light-grey">
-    <script src="hamburger.js"></script>
-    <div class="w3-bar w3-light-gray w3-center">
+    <!-- Top Navigation Bar -->
+    <div class="w3-bar w3-light-gray w3-center" id="top">
+      <!-- Company Logo (left side) -->
+      <a href="./index.html" class="w3-bar-item w3-left logo-link">
+        <img
+          src="./images/logo.png"
+          alt="Dimar Consulting & Investment Group LLC Logo"
+          class="navbar-logo"
+        />
+      </a>
       <!-- Desktop Menu Items (hidden on small screens) -->
       <div class="menu-center w3-hide-small">
         <a
-          href="index.html"
+          href="./index.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Home</a
         >
         <a
-          href="consulting.html"
+          href="./consulting.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Consulting</a
         >
@@ -30,10 +43,24 @@
         <a
           href="#"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Why Dimar?</a
+        >
+        <a
+          href="./contact.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Contact</a
         >
-        <img src="images/logo.png" alt="Company Logo" />
       </div>
+
+      <!-- Dark Mode Toggle Icon -->
+      <button
+        id="darkModeToggle"
+        class="w3-bar-item w3-button w3-right"
+        title="Toggle dark mode"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fa fa-moon" aria-hidden="true"></i>
+      </button>
 
       <!-- Hamburger Icon (right side, visible only on small screens) -->
       <button
@@ -54,27 +81,33 @@
       aria-hidden="true"
     >
       <a
-        href="index.html"
+        href="./index.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Home</a
       >
       <a
-        href="consulting.html"
+        href="./consulting.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Consulting</a
       >
       <a
         href="#"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
-        >Tax Preperation</a
+        >Tax Preparation</a
       >
       <a
         href="#"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Why Dimar?</a
+      >
+      <a
+        href="./contact.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Contact</a
       >
-      <img src="images/logo.png" alt="Company Logo" />
     </div>
+    <script src="./scripts/collapsible-hamburger-menu.js"></script>
+    <script src="./scripts/dark-mode-toggle.js"></script>
 
     <div class="w3-container w3-margin-top w3-padding-32 w3-card">
       <h2 id="page-title" class="w3-center w3-blue"></h2>
@@ -103,6 +136,6 @@
       </div>
     </div>
 
-    <script src="schedule.js"></script>
+    <script src="scripts/schedule.js"></script>
   </body>
 </html>
