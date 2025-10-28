@@ -1925,6 +1925,75 @@ img.bg-consulting {
   color: #90caf9;
 }
 
-.dark-mode schedule {
-  color: #fff;
+.dark-mode #calendar .past {
+  background-color: #1a1a1a !important;
+  color: #555 !important;
+  cursor: not-allowed !important;
+}
+
+.dark-mode #monthYear {
+  color: #ffffff;
+}
+
+.dark-mode #monthprev,
+#monthnext {
+  color: #ffffff;
+}
+
+.dark-mode #calendar {
+  color: #f1f1f1;
+}
+
+.dark-mode .calendar-day:hover {
+  background-color: #333;
+}
+
+.dark-mode .selected {
+  border: 2px solid #64b5f6 !important;
+  background-color: #263238 !important;
+}
+
+.calendar-day:hover {
+  background-color: #6b6a6a;
+}
+
+.dark-mode .today {
+  background-color: #0d47a1 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .avialable-times-title {
+  color: #ffffff;
+}
+
+/* ---------- Schedule Section (Light Mode) ---------- */
+.schedule-section {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-title {
+  color: #0b5394; /* deep blue accent */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.schedule-text {
+  color: #333;
+  font-size: 1.1em;
+  margin-top: 0;
+}
+
+/* ---------- Schedule Section (Dark Mode) ---------- */
+.dark-mode .schedule-section {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .schedule-title {
+  color: #ffffff; /* soft light blue */
+}
+
+.dark-mode .schedule-text {
+  color: #e0e0e0;
 }
