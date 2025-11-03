@@ -179,3 +179,68 @@ footer {
   opacity: 0.4;
   pointer-events: none;
 }
+
+/* Contact page dark mode
+/* Make light-gray section dark with white text */
+body.dark-mode .w3-theme-l5,
+body.dark-mode .w3-light-gray {
+  background-color: #1c1c1c !important;
+  color: #f1f1f1 !important;
+}
+
+/* Office info and form cards */
+body.dark-mode .w3-card.w3-white {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+}
+
+/* Headings inside cards */
+body.dark-mode .w3-card.w3-white h3,
+body.dark-mode .w3-card.w3-white h4 {
+  color: #f1f1f1 !important;
+}
+
+/* Dark mode form styling */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background-color: #2a2a2a;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus {
+  border-color: #2196f3;
+  outline: none;
+  background-color: #333;
+}
+
+body.dark-mode label {
+  color: #f1f1f1;
+}
+
+body.dark-mode ::placeholder {
+  color: #999;
+}
+
+/* Keep button consistent */
+body.dark-mode .w3-button.w3-blue {
+  background-color: #2196f3 !important;
+  color: #fff !important;
+}
+
+/* "Why Choose Dimar" section */
+body.dark-mode .w3-container.w3-center {
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .w3-container.w3-center h2,
+body.dark-mode .w3-container.w3-center h4 {
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .w3-container.w3-center p {
+  color: #e0e0e0 !important;
+}
