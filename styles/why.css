@@ -3,6 +3,8 @@
   color: #ffffff;
 }
 
-.dark-mode .button-2 {
-  color: #ffffff;
+body.dark-mode .w3-button.w3-white {
+  background-color: #333 !important; /* dark background */
+  color: #fff !important; /* white text */
+  border-color: #777 !important; /* softer border */
 }
