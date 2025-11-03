@@ -116,6 +116,64 @@ body.dark-mode .w3-button.w3-blue {
   color: white;
 }
 
+body.dark-mode .w3-dropdown-hover > .w3-button {
+  color: white !important;
+  border-color: #4da3ff !important;
+  background-color: transparent !important;
+}
+
+/* Hover for Tax Preparation button */
+body.dark-mode .w3-dropdown-hover > .w3-button:hover {
+  background-color: #333 !important;
+}
+
+/* Dropdown menu background */
+body.dark-mode .w3-dropdown-content {
+  background-color: #111 !important;
+  border: 1px solid #333 !important;
+}
+
+/* Dropdown items ("Why Dimar") text color */
+body.dark-mode .w3-dropdown-content .w3-bar-item {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+/* Hover effect for dropdown items */
+body.dark-mode .w3-dropdown-content .w3-bar-item:hover {
+  background-color: #222 !important;
+  color: #4da3ff !important;
+}
+
+/* Light mode active link */
+.w3-bar .w3-button.active,
+#smallMenu .w3-button.active {
+  background-color: #0074cc !important; /* bright blue highlight */
+  color: white !important;
+  border-color: #0074cc !important;
+}
+
+/* Dark mode active link */
+body.dark-mode .w3-bar .w3-button.active,
+body.dark-mode #smallMenu .w3-button.active {
+  background-color: #2196f3 !important; /* blue accent */
+  color: #fff !important;
+  border-color: #2196f3 !important;
+}
+
+/* Hover effect for active link in dark mode */
+body.dark-mode .w3-bar .w3-button.active:hover,
+body.dark-mode #smallMenu .w3-button.active:hover {
+  background-color: #1e88e5 !important;
+}
+
+/* Dropdown "active" highlight */
+body.dark-mode .w3-dropdown-content .w3-bar-item.active,
+.w3-dropdown-content .w3-bar-item.active {
+  background-color: #0074cc !important;
+  color: #fff !important;
+}
+
 footer {
   position: relative;
 }
