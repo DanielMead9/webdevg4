@@ -290,3 +290,7 @@ body.dark-mode .w3-container.w3-center h4 {
 body.dark-mode .w3-container.w3-center p {
   color: #e0e0e0 !important;
 }
+
+.dark-mode .w3-dropdown-content {
+  background-color: #222 !important;
+}
