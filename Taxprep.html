@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tax Preparation</title>
-    <link rel="stylesheet" href="/styles/w3.css" />
-    <script src="hamburger.js"></script>
+    <link rel="stylesheet" href="./styles/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/collapsible-hamburger-menu.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <style>
       /* ====== HERO BANNER ====== */
       .hero-banner {
@@ -60,38 +65,60 @@
       }
     </style>
   </head>
-  <body class="w3-light-grey">
+  <body>
     <!-- ======= NAVBAR ======= -->
-    <div class="w3-bar w3-light-gray w3-center">
+    <!-- Top Navigation Bar -->
+    <div class="w3-bar w3-light-gray w3-center" id="top">
+      <!-- Company Logo (left side) -->
+      <a href="./index.html" class="w3-bar-item w3-left logo-link">
+        <img
+          src="./images/logo.png"
+          alt="Dimar Consulting & Investment Group LLC Logo"
+          class="navbar-logo"
+        />
+      </a>
+      <!-- Desktop Menu Items (hidden on small screens) -->
       <div class="menu-center w3-hide-small">
         <a
-          href="index.html"
+          href="./index.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Home</a
         >
         <a
-          href="consulting.html"
+          href="./consulting.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Consulting</a
         >
         <div class="w3-dropdown-hover x-margin-small">
           <a
-            href="Taxprep.html"
+            href="./Taxprep.html"
             class="w3-button w3-border w3-border-blue w3-round-large"
             >Tax Preparation ▾</a
           >
           <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a href="whydimar.html" class="w3-bar-item w3-button">Why Dimar</a>
+            <a href="./whydimar.html" class="w3-bar-item w3-button"
+              >Why Dimar</a
+            >
           </div>
         </div>
         <a
-          href="contact.html"
+          href="./contact.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Contact</a
         >
-        <img src="images/logo.png" alt="Company Logo" />
       </div>
 
+      <!-- Dark Mode Toggle Icon -->
+      <button
+        id="darkModeToggle"
+        class="w3-bar-item w3-button w3-right menu-toggle"
+        title="Toggle dark mode"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fa fa-moon" aria-hidden="true"></i>
+      </button>
+
+      <!-- Hamburger Icon (right side, visible only on small screens) -->
       <button
         class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large menu-toggle"
         aria-controls="smallMenu"
@@ -103,38 +130,40 @@
       </button>
     </div>
 
+    <!-- Collapsible Mobile Menu -->
     <div
       id="smallMenu"
       class="w3-bar-block w3-light-gray w3-hide w3-hide-medium w3-hide-large w3-center"
       aria-hidden="true"
     >
       <a
-        href="index.html"
+        href="./index.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Home</a
       >
       <a
-        href="consulting.html"
+        href="./consulting.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Consulting</a
       >
       <a
-        href="Taxprep.html"
+        href="./Taxprep.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Tax Preparation</a
       >
       <a
-        href="whydimar.html"
+        href="./whydimar.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
-        >Why Dimar</a
+        >Why Dimar?</a
       >
       <a
-        href="contact.html"
+        href="./contact.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Contact</a
       >
-      <img src="images/logo.png" alt="Company Logo" />
     </div>
+    <script src="./scripts/collapsible-hamburger-menu.js"></script>
+    <script src="./scripts/dark-mode-toggle.js"></script>
 
     <!-- ======= HERO IMAGE ======= -->
     <section class="hero-banner">
@@ -217,5 +246,24 @@
         </div>
       </div>
     </main>
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d1 w3-center">
+      <p>Dimar Consulting & Investment Group LLC</p>
+
+      <!-- Go To Top button -->
+      <div class="go-top-container">
+        <a
+          href="#top"
+          class="w3-button w3-theme"
+          aria-label="Go to top"
+          title="Go to top"
+        >
+          <span class="tooltip-text">Go To Top</span>
+          <span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i>
+          </span>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

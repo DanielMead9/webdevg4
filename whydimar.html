@@ -4,124 +4,152 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Why Dimar</title>
-    <link rel="stylesheet" href="/styles/w3.css" />
-    <script src="hamburger.js"></script>
-    <style>
-      /* ====== HERO BANNER ====== */
-      .hero-banner {
-        position: relative;
-        width: 100%;
-        height: 350px;
-        background: url("images/05e3dc_1166e6044833437f9fbed91bd3c6e7f4\ \(1\).avif")
-          center/cover no-repeat;
-      }
-      .hero-banner::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.45);
-      }
-      .hero-banner h1 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        font-size: 3rem;
-        font-weight: 700;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-        text-align: center;
-        margin: 0;
-        z-index: 1;
-      }
-
-      /* ====== CONTENT STYLES ====== */
-      .container {
-        max-width: 1100px;
-        margin: 40px auto;
-        padding: 0 24px;
-      }
-
-      .card {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-        padding: 40px; /* Increased padding inside cards */
-        margin-bottom: 32px; /* more space between cards */
-      }
-
-      .pill {
-        display: inline-block;
-        padding: 0.3rem 0.75rem;
-        border: 1px solid #1e88e5;
-        border-radius: 999px;
-        font-size: 0.9rem;
-        margin: 0.25rem 0.3rem 0 0;
-      }
-
-      .lead {
-        font-size: 1.2rem;
-        margin-bottom: 16px;
-      }
-
-      .tight li {
-        margin: 0.5rem 0;
-        line-height: 1.6;
-      }
-
-      .big li {
-        margin: 0.65rem 0;
-        line-height: 1.6;
-      }
-
-      .cta {
-        margin-top: 16px;
-      }
-
-      .cta a {
-        margin-right: 10px;
-        margin-bottom: 10px;
-      }
-
-      /* Improve spacing inside the pale-blue info box */
-      .w3-panel {
-        padding: 20px 24px;
-        margin-top: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="./styles/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/collapsible-hamburger-menu.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/why.css" />
   </head>
-  <body class="w3-light-grey">
-    <!-- ======= NAVBAR ======= -->
-    <div class="w3-bar w3-light-gray w3-center">
+  <style>
+    /* ====== HERO BANNER ====== */
+    .hero-banner {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      background: url("images/05e3dc_1166e6044833437f9fbed91bd3c6e7f4\ \(1\).avif")
+        center/cover no-repeat;
+    }
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+    .hero-banner h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      margin: 0;
+      z-index: 1;
+    }
+
+    /* ====== CONTENT STYLES ====== */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      padding: 40px; /* Increased padding inside cards */
+      margin-bottom: 32px; /* more space between cards */
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.3rem 0.75rem;
+      border: 1px solid #1e88e5;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      margin: 0.25rem 0.3rem 0 0;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+
+    .tight li {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+
+    .big li {
+      margin: 0.65rem 0;
+      line-height: 1.6;
+    }
+
+    .cta {
+      margin-top: 16px;
+    }
+
+    .cta a {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Improve spacing inside the pale-blue info box */
+    .w3-panel {
+      padding: 20px 24px;
+      margin-top: 20px;
+    }
+  </style>
+
+  <body>
+    <!-- Top Navigation Bar -->
+    <div class="w3-bar w3-light-gray w3-center" id="top">
+      <!-- Company Logo (left side) -->
+      <a href="./index.html" class="w3-bar-item w3-left logo-link">
+        <img
+          src="./images/logo.png"
+          alt="Dimar Consulting & Investment Group LLC Logo"
+          class="navbar-logo"
+        />
+      </a>
+      <!-- Desktop Menu Items (hidden on small screens) -->
       <div class="menu-center w3-hide-small">
         <a
-          href="index.html"
+          href="./index.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Home</a
         >
         <a
-          href="consulting.html"
+          href="./consulting.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Consulting</a
         >
         <div class="w3-dropdown-hover x-margin-small">
           <a
-            href="Taxprep.html"
+            href="./Taxprep.html"
             class="w3-button w3-border w3-border-blue w3-round-large"
             >Tax Preparation ▾</a
           >
           <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a href="whydimar.html" class="w3-bar-item w3-button">Why Dimar</a>
+            <a href="./whydimar.html" class="w3-bar-item w3-button"
+              >Why Dimar</a
+            >
           </div>
         </div>
         <a
-          href="contact.html"
+          href="./contact.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Contact</a
         >
-        <img src="images/logo.png" alt="Company Logo" />
       </div>
 
+      <!-- Dark Mode Toggle Icon -->
+      <button
+        id="darkModeToggle"
+        class="w3-bar-item w3-button w3-right menu-toggle"
+        title="Toggle dark mode"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fa fa-moon" aria-hidden="true"></i>
+      </button>
+
+      <!-- Hamburger Icon (right side, visible only on small screens) -->
       <button
         class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large menu-toggle"
         aria-controls="smallMenu"
@@ -133,39 +161,40 @@
       </button>
     </div>
 
+    <!-- Collapsible Mobile Menu -->
     <div
       id="smallMenu"
       class="w3-bar-block w3-light-gray w3-hide w3-hide-medium w3-hide-large w3-center"
       aria-hidden="true"
     >
       <a
-        href="index.html"
+        href="./index.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Home</a
       >
       <a
-        href="consulting.html"
+        href="./consulting.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Consulting</a
       >
       <a
-        href="Taxprep.html"
+        href="./Taxprep.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Tax Preparation</a
       >
       <a
-        href="whydimar.html"
+        href="./whydimar.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
-        >Why Dimar</a
+        >Why Dimar?</a
       >
       <a
-        href="contact.html"
+        href="./contact.html"
         class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
         >Contact</a
       >
-      <img src="images/logo.png" alt="Company Logo" />
     </div>
-    <!-- ======= /NAVBAR ======= -->
+    <script src="./scripts/collapsible-hamburger-menu.js"></script>
+    <script src="./scripts/dark-mode-toggle.js"></script>
 
     <!-- ======= HERO IMAGE ======= -->
     <section class="hero-banner">
@@ -223,12 +252,12 @@
           >
           <a
             href="mailto:info@dimar.example"
-            class="w3-button w3-white w3-border w3-round-large"
+            class="w3-button w3-white w3-border w3-round-large button-2"
             >Email</a
           >
           <a
             href="schedule.html?service=Consultation"
-            class="w3-button w3-white w3-border w3-round-large"
+            class="w3-button w3-white w3-border w3-round-large button-2"
             >Schedule a Consultation</a
           >
         </div>
@@ -259,5 +288,24 @@
         </p>
       </section>
     </main>
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d1 w3-center">
+      <p>Dimar Consulting & Investment Group LLC</p>
+
+      <!-- Go To Top button -->
+      <div class="go-top-container">
+        <a
+          href="#top"
+          class="w3-button w3-theme"
+          aria-label="Go to top"
+          title="Go to top"
+        >
+          <span class="tooltip-text">Go To Top</span>
+          <span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i>
+          </span>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
