@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tax Preparation</title>
+    <link rel="stylesheet" href="/styles/w3.css" />
+    <script src="hamburger.js"></script>
+    <style>
+      /* ====== HERO BANNER ====== */
+      .hero-banner {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        background: url("/images/05e3dc_1166e6044833437f9fbed91bd3c6e7f4.avif")
+          center/cover no-repeat;
+      }
+
+      .hero-banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+
+      .hero-banner h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 700;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        text-align: center;
+        margin: 0;
+        z-index: 1;
+      }
+
+      /* ====== CONTENT SECTION ====== */
+      .tp-section {
+        max-width: 1140px;
+        margin: 24px auto;
+        padding: 16px;
+      }
+
+      .tp-sideimg {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      }
+
+      .tp-highlights p {
+        margin: 8px 0;
+      }
+
+      .tp-cta {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body class="w3-light-grey">
+    <!-- ======= NAVBAR ======= -->
+    <div class="w3-bar w3-light-gray w3-center">
+      <div class="menu-center w3-hide-small">
+        <a
+          href="index.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Home</a
+        >
+        <a
+          href="consulting.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Consulting</a
+        >
+        <div class="w3-dropdown-hover x-margin-small">
+          <a
+            href="Taxprep.html"
+            class="w3-button w3-border w3-border-blue w3-round-large"
+            >Tax Preparation ▾</a
+          >
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="whydimar.html" class="w3-bar-item w3-button">Why Dimar</a>
+          </div>
+        </div>
+        <a
+          href="contact.html"
+          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+          >Contact</a
+        >
+        <img src="images/logo.png" alt="Company Logo" />
+      </div>
+
+      <button
+        class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large menu-toggle"
+        aria-controls="smallMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        onclick="toggleMenu()"
+      >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div
+      id="smallMenu"
+      class="w3-bar-block w3-light-gray w3-hide w3-hide-medium w3-hide-large w3-center"
+      aria-hidden="true"
+    >
+      <a
+        href="index.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Home</a
+      >
+      <a
+        href="consulting.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Consulting</a
+      >
+      <a
+        href="Taxprep.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Tax Preparation</a
+      >
+      <a
+        href="whydimar.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Why Dimar</a
+      >
+      <a
+        href="contact.html"
+        class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
+        >Contact</a
+      >
+      <img src="images/logo.png" alt="Company Logo" />
+    </div>
+
+    <!-- ======= HERO IMAGE ======= -->
+    <section class="hero-banner">
+      <h1>Tax Preparation</h1>
+    </section>
+
+    <!-- ======= MAIN CONTENT ======= -->
+    <main class="tp-section">
+      <div class="w3-row-padding w3-white w3-card w3-round-large">
+        <!-- Left Image -->
+        <div class="w3-col l5 m12 w3-padding-16">
+          <img
+            src="images/premium_photo-1679496828190-2ab9669c9153.jfif"
+            alt="Tax preparation consultation"
+            class="tp-sideimg"
+          />
+        </div>
+
+        <!-- Right Text -->
+        <div class="w3-col l7 m12 w3-padding-16">
+          <p>
+            Because our firm is relatively small, our clients benefit by getting
+            personalized, quality service. Dimar is small firm that focuses on
+            you, the client. We provide full services of tax preparation for
+            Individuals, small businesses and corporations. Our objective is to
+            provide high-quality tax preparation services to our clients and
+            maintained personal relationship with our customers.
+          </p>
+
+          <h3>Tax return preparations are the core of our company</h3>
+
+          <h4 class="w3-text-blue w3-margin-top">Individual Tax Preparation</h4>
+          <p>
+            Our clients are the most valuable to us. We provided tax return
+            preparation services for Corporations, LLC, home owner, and small
+            businesses.
+          </p>
+
+          <h4 class="w3-text-blue w3-margin-top">Business Tax Preparation</h4>
+          <p>
+            We provide our individual and business clients with the taxation
+            expertise and knowledge that they deserve throughout the year.
+            Efficiently prepare returns for various types of entities including
+            individuals, corporations, partnerships, trusts and estates.
+          </p>
+
+          <div class="tp-highlights w3-margin-top">
+            <p>
+              <strong>Integrity:</strong> We guarantee our work – at no
+              additional cost to you! We furnish you with a legible copy as
+              required by law.
+            </p>
+            <p>
+              <strong>Pricing:</strong> Our average price is low – and much
+              lower than the national average.
+            </p>
+            <p>
+              <strong>We’re Open:</strong> We are available for your tax needs
+              all year long.
+            </p>
+            <p>
+              <strong>Fast:</strong> Don’t have time to come in? We have a drop
+              off service!
+            </p>
+          </div>
+
+          <p class="w3-margin-top">
+            Please feel free to inquire about a service if you do not see it
+            listed. If it is not a service we provide, we would be more than
+            happy to refer you to a qualified professional.
+          </p>
+
+          <div class="tp-cta">
+            <a
+              href="schedule.html?service=Tax Preparation"
+              class="w3-button w3-blue w3-round-large"
+              >Schedule an Appointment</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

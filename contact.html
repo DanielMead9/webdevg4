@@ -35,16 +35,16 @@
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Consulting</a
         >
-        <a
-          href="#"
-          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
-          >Tax Preparation</a
-        >
-        <a
-          href="#"
-          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
-          >Why Dimar?</a
-        >
+        <div class="w3-dropdown-hover x-margin-small">
+          <a
+            href="Taxprep.html"
+            class="w3-button w3-border w3-border-blue w3-round-large"
+            >Tax Preparation ▾</a
+          >
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="whydimar.html" class="w3-bar-item w3-button">Why Dimar</a>
+          </div>
+        </div>
         <a
           href="#"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
@@ -55,7 +55,7 @@
       <!-- Dark Mode Toggle Icon -->
       <button
         id="darkModeToggle"
-        class="w3-bar-item w3-button w3-right"
+        class="w3-bar-item w3-button w3-right menu-toggle"
         title="Toggle dark mode"
         aria-label="Toggle dark mode"
       >
@@ -111,11 +111,7 @@
     <header>
       <!-- Image Header -->
       <div class="w3-display-container w3-animate-opacity">
-        <img
-          src="/images/contact-banner.avif"
-          alt="banner"
-          style="width: 100%; min-height: 350px; max-height: 600px"
-        />
+        <img src="/images/contact-banner.avif" alt="banner" />
         <!-- Overlay -->
         <div class="contact-banner-overlay"></div>
         <!-- Centered text and button -->
@@ -183,9 +179,11 @@
               <h3 class="text-primary">
                 <i class="fas fa-envelope"></i> Send Us a Message
               </h3>
-              <p><span style="color: red">*</span> Required fields</p>
-              <form style="margin-top: 16px" action="#" method="post">
-                <label for="name">Name <span style="color: red">*</span></label>
+              <p><span class="required-star">*</span> Required fields</p>
+              <form class="contact-form" action="#" method="post">
+                <label for="name"
+                  >Name <span class="required-star">*</span></label
+                >
                 <input
                   class="w3-input w3-border w3-round"
                   type="text"
@@ -195,7 +193,7 @@
                 />
 
                 <label for="email"
-                  >Email <span style="color: red">*</span></label
+                  >Email <span class="required-star">*</span></label
                 >
                 <input
                   class="w3-input w3-border w3-round"
@@ -230,7 +228,7 @@
                 </select>
 
                 <label for="message"
-                  >Message <span style="color: red">*</span></label
+                  >Message <span class="required-star">*</span></label
                 >
                 <textarea
                   class="w3-input w3-border w3-round"
@@ -242,8 +240,7 @@
 
                 <button
                   type="submit"
-                  class="w3-button w3-blue w3-round-large w3-margin-top"
-                  style="width: 100%"
+                  class="w3-button w3-blue w3-round-large w3-margin-top contact-form-button"
                 >
                   <i class="fas fa-paper-plane"></i> Send Message
                 </button>

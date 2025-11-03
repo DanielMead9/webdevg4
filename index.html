@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Dimar Consulting</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link rel="stylesheet" href="./styles/w3.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -35,16 +35,16 @@
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
           >Consulting</a
         >
-        <a
-          href="#"
-          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
-          >Tax Preparation</a
-        >
-        <a
-          href="#"
-          class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
-          >Why Dimar?</a
-        >
+        <div class="w3-dropdown-hover x-margin-small">
+          <a
+            href="Taxprep.html"
+            class="w3-button w3-border w3-border-blue w3-round-large"
+            >Tax Preparation ▾</a
+          >
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="whydimar.html" class="w3-bar-item w3-button">Why Dimar</a>
+          </div>
+        </div>
         <a
           href="./contact.html"
           class="w3-bar-item w3-button w3-border w3-border-blue w3-round-large x-margin-small"
@@ -55,7 +55,7 @@
       <!-- Dark Mode Toggle Icon -->
       <button
         id="darkModeToggle"
-        class="w3-bar-item w3-button w3-right"
+        class="w3-bar-item w3-button w3-right menu-toggle"
         title="Toggle dark mode"
         aria-label="Toggle dark mode"
       >
@@ -111,11 +111,7 @@
     <header>
       <!-- Image Header -->
       <div class="w3-display-container w3-animate-opacity">
-        <img
-          src="/images/home/home-banner.avif"
-          alt="banner"
-          style="width: 100%; min-height: 350px; max-height: 600px"
-        />
+        <img src="/images/home/home-banner.avif" alt="banner" />
         <!-- Centered text and button -->
         <div class="w3-display-middle w3-center">
           <h1 class="w3-xxlarge w3-bold w3-text-white w3-wide w3-animate-top">
@@ -142,7 +138,6 @@
             src="/images/home/graph-hover.png"
             alt="Dimar Consulting Office"
             class="w3-image w3-round hover-color"
-            style="max-width: 90%"
           />
         </div>
 
@@ -211,11 +206,32 @@
             src="/images/home/services-hover.png"
             alt="Our Services"
             class="w3-image w3-round hover-color"
-            style="max-width: 90%"
           />
         </div>
       </section>
-
+      <!-- Why Choose Us Section -->
+      <section class="w3-container w3-padding-64 w3-center">
+        <h2 class="w3-xxlarge w3-text-dark-gray">
+          Why Choose Dimar Consulting?
+        </h2>
+        <div class="w3-row-padding w3-margin-top">
+          <div class="w3-third">
+            <i class="fas fa-user-tie w3-xxlarge w3-text-teal"></i>
+            <h4>Professional Service</h4>
+            <p>Experienced consultants dedicated to your success</p>
+          </div>
+          <div class="w3-third">
+            <i class="fas fa-handshake w3-xxlarge w3-text-teal"></i>
+            <h4>Personal Relationships</h4>
+            <p>We build lasting partnerships with our clients</p>
+          </div>
+          <div class="w3-third">
+            <i class="fas fa-chart-line w3-xxlarge w3-text-teal"></i>
+            <h4>Results-Driven</h4>
+            <p>Focused on achieving your business goals</p>
+          </div>
+        </div>
+      </section>
       <!-- Contact Row -->
       <section id="contact" class="w3-row w3-padding-64">
         <!-- Left: Text -->
