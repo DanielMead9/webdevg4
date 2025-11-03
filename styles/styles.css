@@ -116,6 +116,64 @@ body.dark-mode .w3-button.w3-blue {
   color: white;
 }
 
+body.dark-mode .w3-dropdown-hover > .w3-button {
+  color: white !important;
+  border-color: #4da3ff !important;
+  background-color: transparent !important;
+}
+
+/* Hover for Tax Preparation button */
+body.dark-mode .w3-dropdown-hover > .w3-button:hover {
+  background-color: #333 !important;
+}
+
+/* Dropdown menu background */
+body.dark-mode .w3-dropdown-content {
+  background-color: #111 !important;
+  border: 1px solid #333 !important;
+}
+
+/* Dropdown items ("Why Dimar") text color */
+body.dark-mode .w3-dropdown-content .w3-bar-item {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+/* Hover effect for dropdown items */
+body.dark-mode .w3-dropdown-content .w3-bar-item:hover {
+  background-color: #222 !important;
+  color: #4da3ff !important;
+}
+
+/* Light mode active link */
+.w3-bar .w3-button.active,
+#smallMenu .w3-button.active {
+  background-color: #0074cc !important; /* bright blue highlight */
+  color: white !important;
+  border-color: #0074cc !important;
+}
+
+/* Dark mode active link */
+body.dark-mode .w3-bar .w3-button.active,
+body.dark-mode #smallMenu .w3-button.active {
+  background-color: #2196f3 !important; /* blue accent */
+  color: #fff !important;
+  border-color: #2196f3 !important;
+}
+
+/* Hover effect for active link in dark mode */
+body.dark-mode .w3-bar .w3-button.active:hover,
+body.dark-mode #smallMenu .w3-button.active:hover {
+  background-color: #1e88e5 !important;
+}
+
+/* Dropdown "active" highlight */
+body.dark-mode .w3-dropdown-content .w3-bar-item.active,
+.w3-dropdown-content .w3-bar-item.active {
+  background-color: #0074cc !important;
+  color: #fff !important;
+}
+
 footer {
   position: relative;
 }
@@ -293,4 +351,136 @@ body.dark-mode .w3-container.w3-center p {
 
 .dark-mode .w3-dropdown-content {
   background-color: #222 !important;
+}
+
+
+/* Tax Prep styles */
+.taxprep-page .hero-banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: url("/images/05e3dc_1166e6044833437f9fbed91bd3c6e7f4.avif") center/cover no-repeat;
+}
+
+.taxprep-page .hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.taxprep-page .hero-banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin: 0;
+  z-index: 1;
+}
+
+.taxprep-page .tp-section {
+  max-width: 1140px;
+  margin: 24px auto;
+  padding: 16px;
+}
+
+.taxprep-page .tp-sideimg {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.taxprep-page .tp-highlights p {
+  margin: 8px 0;
+}
+
+.taxprep-page .tp-cta {
+  margin-top: 20px;
+}
+
+/* Why Dimar page styles */  
+.whydimar-page .hero-banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: url("/images/05e3dc_1166e6044833437f9fbed91bd3c6e7f4 (1).avif") center/cover no-repeat;
+}
+
+.whydimar-page .hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.whydimar-page .hero-banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin: 0;
+  z-index: 1;
+}
+
+.whydimar-page .container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.whydimar-page .card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  margin-bottom: 32px;
+}
+
+.whydimar-page .pill {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #1e88e5;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  margin: 0.25rem 0.3rem 0 0;
+}
+
+.whydimar-page .lead {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.whydimar-page .tight li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.whydimar-page .big li {
+  margin: 0.65rem 0;
+  line-height: 1.6;
+}
+
+.whydimar-page .cta {
+  margin-top: 16px;
+}
+
+.whydimar-page .cta a {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.whydimar-page .w3-panel {
+  padding: 20px 24px;
+  margin-top: 20px;
 }
