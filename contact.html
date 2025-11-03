@@ -114,7 +114,6 @@
         <img
           src="/images/contact-banner.avif"
           alt="banner"
-          style="width: 100%; min-height: 350px; max-height: 600px"
         />
         <!-- Overlay -->
         <div class="contact-banner-overlay"></div>
@@ -183,9 +182,9 @@
               <h3 class="text-primary">
                 <i class="fas fa-envelope"></i> Send Us a Message
               </h3>
-              <p><span style="color: red">*</span> Required fields</p>
-              <form style="margin-top: 16px" action="#" method="post">
-                <label for="name">Name <span style="color: red">*</span></label>
+              <p><span class="required-star">*</span> Required fields</p>
+              <form class="contact-form" action="#" method="post">
+                <label for="name">Name <span class="required-star">*</span></label>
                 <input
                   class="w3-input w3-border w3-round"
                   type="text"
@@ -195,7 +194,7 @@
                 />
 
                 <label for="email"
-                  >Email <span style="color: red">*</span></label
+                  >Email <span class="required-star">*</span></label
                 >
                 <input
                   class="w3-input w3-border w3-round"
@@ -230,7 +229,7 @@
                 </select>
 
                 <label for="message"
-                  >Message <span style="color: red">*</span></label
+                  >Message <span class="required-star">*</span></label
                 >
                 <textarea
                   class="w3-input w3-border w3-round"
@@ -242,8 +241,7 @@
 
                 <button
                   type="submit"
-                  class="w3-button w3-blue w3-round-large w3-margin-top"
-                  style="width: 100%"
+                  class="w3-button w3-blue w3-round-large w3-margin-top contact-form-button"
                 >
                   <i class="fas fa-paper-plane"></i> Send Message
                 </button>

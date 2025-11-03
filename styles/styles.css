@@ -22,6 +22,12 @@
   }
 }
 
+header img {
+  width: 100%;
+  min-height: 350px;
+  max-height: 600px;
+}
+
 /* Invert logo in dark mode */
 body.dark-mode .navbar-logo {
   filter: invert(1) hue-rotate(180deg);
@@ -198,6 +204,46 @@ body.dark-mode .w3-card.w3-white {
 body.dark-mode .w3-card.w3-white h3,
 body.dark-mode .w3-card.w3-white h4 {
   color: #f1f1f1 !important;
+}
+
+/* --- Contact Page Styles --- */
+.contact-form {
+  margin-top: 16px;
+}
+
+/* Banner Image */
+header img {
+  width: 100%;
+  min-height: 350px;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* Overlay on the banner */
+.contact-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+}
+
+/* Red asterisk for required fields */
+.required-star {
+  color: red;
+}
+
+/* Make the Send Message button fill its container width */
+.contact-form-button {
+  width: 100%;
+}
+
+form input,
+form select,
+form textarea {
+  margin-top: 4px;
 }
 
 /* Dark mode form styling */
